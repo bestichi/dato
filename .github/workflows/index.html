@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>კომენტარები</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/JavaScript">
+        function showMessage(){
+            var message = document.getElementById("message").value;
+            display_message.innerHTML= message;
+            var meil = document.getElementById("meil").value;
+            display_meil.innerHTML= meil;
+            var age = document.getElementById("age").value;
+            display_age.innerHTML= age;
+            var coment = document.getElementById("coment").value;
+            display_coment.innerHTML= coment;
+        }
+        
+    </script>
+</head>
+<body><font color="red">გთხოვთ დაგვიტოვოთ თქვენი კომენტარი:</font>
+<form>
+<ul><input type="text" id = "message" placeholder="სახელი"></ul>
+<ul><input type="text" id = "meil" placeholder="მეილი"></ul>
+<ul><input type="number" id = "age" placeholder="ასაკი"></ul>
+<ul><input type="text" id = "coment" placeholder="კომენტარი"></ul>
+<ul><input type="button" onclick="showMessage()" value="დაწერა" /></ul>
+</form>
+<p> მომხმარებელი: <span id = "display_message"></span> </p>
+<p> მეილი: <span id = "display_meil"></span></p>
+<p> ასაკი: <span id = "display_age"></span></p>
+<p> კომენტარი: <span id = "display_coment"></span></p>
+</div>
+</body>
+</html>
