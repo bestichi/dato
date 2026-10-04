@@ -35,4 +35,11 @@ NODE_PATH=$(npm root -g) node preview.mjs
 ```
 
 შრიფტები: Noto Sans Georgian და Montserrat (OFL ლიცენზია), `assets/fonts`-შია.
-პროდუქტების სურათები superi.ge-ის კატეგორიების ბანერებიდანაა აღებული.
+პროდუქტების სურათები superi.ge-დანაა აღებული. v1, v2 და v4-ზე კატეგორიების ბანერების სურათებია.
+v3-ზე სხვა პროდუქტებია (მაცივარი, LEGO, ყავის აპარატი, სკუტერი), რომ ქვემოთ კატეგორიების ბარათებს არ გაიმეოროს.
+თეთრი ფონი `cutout.py`-თ მოიჭრა:
+
+```sh
+python3 cutout.py photo.jpg assets/name.png              # თეთრი/ღია ფონი → გამჭვირვალე PNG
+python3 cutout.py scooter.webp assets/scooter.png --holes 400   # ჩაკეტილი ფონის ადგილებიც
+```
