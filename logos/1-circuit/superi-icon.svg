@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="superi.ge">
+<title>superi.ge</title>
+<g transform="translate(0 0) scale(1)">
+  <rect width="120" height="120" rx="30" fill="#2FA65A"/>
+  <path d="M78 32H51a14 14 0 0 0 0 28h18a14 14 0 0 1 0 28H42" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="86" cy="32" r="10" fill="#FFFFFF"/><circle cx="86" cy="32" r="4" fill="#2FA65A"/>
+  <circle cx="34" cy="88" r="10" fill="#FFFFFF"/><circle cx="34" cy="88" r="4" fill="#2FA65A"/>
+</g>
+</svg>
