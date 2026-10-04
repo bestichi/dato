@@ -1,4 +1,4 @@
--- superi.ge — დუბლიკატები, მე-2 ტალღა (8 წყვილი) + iPhone 17 Pro Max 256GB Cosmic Orange-ის არასწორი გადამისამართება
+-- superi.ge — დუბლიკატები, მე-2 ტალღა (6 წყვილი, Remeza გარეშე) + iPhone 17 Pro Max 256GB Cosmic Orange-ის არასწორი გადამისამართება
 -- წესი: რჩება S-კოდიანი; თუ ორივე ან არცერთი S — მარაგში არსებული; შემდეგ — სუფთა მისამართიანი.
 -- მეორე ითიშება (არ იშლება), მისი მისამართი 301-ით გადადის დარჩენილზე. დარჩენილი იღებს სუფთა მისამართს.
 
@@ -8,8 +8,6 @@
 --   რჩება 8459 (13177, 719 ₾, InStock) -> /asus-prime-z790m-plus-4ddr5-lga1700-90mb1e70-m1eay0/ | ითიშება 8957 (801695, 690 ₾) | no S, clean URL
 --   რჩება 8458 (13653, 539 ₾, InStock) -> /gigabyte-b760-gaming-x-4ddr5-lga1700/ | ითიშება 8966 (846328, 520 ₾) | no S, clean URL
 --   რჩება 10358 (S98107, 380 ₾, InStock) -> /tp-link-archer-ge230-be3600-dual-band-wi-fi-7-gaming-router/ | ითიშება 9761 (66010194683, 339 ₾) | S
---   რჩება 1513 (179131, 9490 ₾, InStock) -> /remeza-sb4-f-500-lt100-11/ | ითიშება 11608 (#P00011, 7790 ₾) | no S, clean URL
---   რჩება 1512 (179130, 6490 ₾, InStock) -> /remeza-sb4-f-500-lt100/ | ითიშება 11607 (#P00010, 6490 ₾) | no S, clean URL
 --   iPhone Cosmic Orange 256GB: /apple-iphone-17-pro-max-256gb-cosmic-orange/ ახლა 2TB-ზე გადადის — ვაბრუნებთ 256GB პროდუქტზე (12597, S48891)
 
 -- 0) გადამისამართების ფორმატი
@@ -25,15 +23,13 @@ INSERT IGNORE INTO cscart_seo_redirects (src, type, object_id, lang_code, compan
 (CONCAT(@pre,'asus-prime-z790m-plus-4ddr5-lga1700-90mb1e70-m1eay0-ka-2',@post),'p',8459,'ka',1),
 (CONCAT(@pre,'gigabyte-b760-gaming-x-4ddr5-lga1700-ka',@post),'p',8458,'ka',1),
 (CONCAT(@pre,'tp-link-archer-ge230-be3600-dual-band-wi-fi-7-gaming-router-ka',@post),'p',10358,'ka',1),
-(CONCAT(@pre,'remeza-sb4-f-500-lt100-11-ka',@post),'p',1513,'ka',1),
-(CONCAT(@pre,'remeza-sb4-f-500-lt100-ka',@post),'p',1512,'ka',1),
 (CONCAT(@pre,'apple-iphone-17-pro-max-256gb-cosmic-orange-ka',@post),'p',12597,'ka',1);
 
 -- 2) მეორე პროდუქტის გათიშვა
-UPDATE cscart_products SET status = 'D' WHERE product_id IN (9830,9832,14253,8957,8966,9761,11608,11607);
+UPDATE cscart_products SET status = 'D' WHERE product_id IN (9830,9832,14253,8957,8966,9761);
 
 -- 3) გათიშულის მისამართის გათავისუფლება
-UPDATE cscart_seo_names SET name = CONCAT('dup-', object_id) WHERE type = 'p' AND company_id = 1 AND lang_code = 'ka' AND object_id IN (9830,9832,14253,8957,8966,9761,11608,11607);
+UPDATE cscart_seo_names SET name = CONCAT('dup-', object_id) WHERE type = 'p' AND company_id = 1 AND lang_code = 'ka' AND object_id IN (9830,9832,14253,8957,8966,9761);
 
 -- 4) iPhone 256GB Cosmic Orange: არასწორი გადამისამართების (256GB -> 2TB) წაშლა
 DELETE FROM cscart_seo_redirects WHERE company_id = 1 AND TRIM(BOTH '/' FROM src) = 'apple-iphone-17-pro-max-256gb-cosmic-orange';
@@ -45,4 +41,4 @@ UPDATE cscart_seo_names SET name = 'tp-link-archer-ge230-be3600-dual-band-wi-fi-
 UPDATE cscart_seo_names SET name = 'apple-iphone-17-pro-max-256gb-cosmic-orange' WHERE type = 'p' AND object_id = 12597 AND name = 'apple-iphone-17-pro-max-256gb-cosmic-orange-ka' AND company_id = 1 AND lang_code = 'ka';
 
 -- 6) შემოწმება: დარჩენილები A + სუფთა მისამართი, გათიშულები D + dup-NNNN
-SELECT p.product_id, p.product_code, p.status, s.name FROM cscart_products p LEFT JOIN cscart_seo_names s ON s.object_id = p.product_id AND s.type = 'p' AND s.lang_code = 'ka' WHERE p.product_id IN (12598,9830,12599,9832,13520,14253,8459,8957,8458,8966,10358,9761,1513,11608,1512,11607,12597) ORDER BY s.name;
+SELECT p.product_id, p.product_code, p.status, s.name FROM cscart_products p LEFT JOIN cscart_seo_names s ON s.object_id = p.product_id AND s.type = 'p' AND s.lang_code = 'ka' WHERE p.product_id IN (12598,9830,12599,9832,13520,14253,8459,8957,8458,8966,10358,9761,12597) ORDER BY s.name;
