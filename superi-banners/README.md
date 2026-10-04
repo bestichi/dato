@@ -13,6 +13,7 @@ alta.ge-ს სტილში, ყველა კატეგორიის�
 | კატეგორია | საქაღალდე |
 |---|---|
 | [სამზარეულოს ტექნიკა](https://superi.ge/samzarelos-teqnika/) | [samzareulos-teqnika](samzareulos-teqnika/) |
+| [ტელეფონები, ტაბლეტები](https://superi.ge/telefonebi-tabletebi/) | [telefonebi-tabletebi](telefonebi-tabletebi/) |
 
 ## ბადე და hover: 6 ბანერი ერთ რიგში, ალტასავით
 

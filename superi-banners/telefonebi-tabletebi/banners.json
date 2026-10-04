@@ -1,0 +1,48 @@
+{
+ "category": "ტელეფონები, ტაბლეტები, ელექტრონული წიგნები",
+ "category_url": "https://superi.ge/telefonebi-tabletebi/",
+ "items": [
+  {
+   "file": "01-mobiluri-teleponebi",
+   "label": "მობილური ტელეფონები",
+   "url": "https://superi.ge/mobiluri-teleponebi/",
+   "src": "https://superi.ge/images/detailed/38/580d6074-3081-4c10-827b-66b16e86bbb2.png",
+   "sr": false
+  },
+  {
+   "file": "02-tabletebi",
+   "label": "ტაბლეტები",
+   "url": "https://superi.ge/tabletebi/",
+   "src": "https://superi.ge/images/detailed/8/2bf2ce0f-04ee-42d9-ab59-c9a04abb08bb.png",
+   "sr": false
+  },
+  {
+   "file": "03-smart-watches",
+   "label": "SMART WATCHES",
+   "url": "https://superi.ge/smart-watches/",
+   "src": "https://superi.ge/images/detailed/8/e59f2167-2102-4276-9497-7b5c33e69f48.png",
+   "sr": false
+  },
+  {
+   "file": "04-yursasmenebi",
+   "label": "ყურსასმენები",
+   "url": "https://superi.ge/yursasmenebi/",
+   "src": "https://superi.ge/images/detailed/8/7de214ef-6c18-4581-b066-16bb2992c9c7.png",
+   "sr": false
+  },
+  {
+   "file": "05-mobiluri-aqsesuarebi",
+   "label": "მობილური აქსესუარები",
+   "url": "https://superi.ge/mobiluri-aqsesuarebi/",
+   "src": "https://superi.ge/images/detailed/8/f7d509f1-3ff9-491c-935a-3b5d1ad9cf91.png",
+   "sr": false
+  },
+  {
+   "file": "06-statsionaluri-teleponebi",
+   "label": "სტაციონალური ტელეფონები",
+   "url": "https://superi.ge/statsionaluri-teleponebi/",
+   "src": "https://superi.ge/images/detailed/8/953979db-5d55-4590-a0c6-3e462321e83a.png",
+   "sr": false
+  }
+ ]
+}
