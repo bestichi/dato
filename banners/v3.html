@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>ბანერი 3 · ფერადი ბარათები</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .banner {
+    background:
+      radial-gradient(700px 420px at 1250px 120px, rgba(190,235,120,.45) 0%, rgba(190,235,120,0) 70%),
+      linear-gradient(115deg, #24702b 0%, #3c8f36 45%, #5fae45 100%);
+  }
+  .stripes { inset: 0;
+    background: repeating-linear-gradient(-60deg, rgba(255,255,255,.05) 0 34px, transparent 34px 68px); }
+  .blob { left: -120px; top: 230px; width: 420px; height: 420px; border-radius: 50%;
+    background: rgba(255,255,255,.06); }
+  .conf { position: absolute; border-radius: 3px; }
+
+  .copy { left: 150px; top: 0; height: 400px; width: 680px;
+    display: flex; flex-direction: column; justify-content: center; }
+  h1 { font-weight: 900; font-size: 76px; line-height: 1; color: #fff; letter-spacing: 1px;
+    font-stretch: 88%; text-shadow: 0 6px 0 rgba(10,60,15,.35); }
+  .sub { margin-top: 16px; font-size: 22px; font-weight: 600; color: rgba(255,255,255,.92);
+    display: flex; gap: 14px; align-items: center; }
+  .sub b { width: 6px; height: 6px; border-radius: 50%; background: #ffd84d; }
+  .row { margin-top: 28px; display: flex; align-items: center; gap: 22px; }
+  .sticker { background: #ffd84d; color: #1d4a1c; border-radius: 14px; padding: 6px 18px 8px;
+    transform: rotate(-4deg); box-shadow: 0 8px 0 #e0b52a, 0 14px 26px rgba(0,0,0,.18);
+    display: flex; align-items: baseline; gap: 6px; }
+  .sticker .num { font-weight: 900; font-size: 46px; letter-spacing: -1.5px; line-height: 1.1; }
+  .sticker .upto { font-weight: 800; font-size: 22px; }
+  .cta { display: inline-flex; align-items: center; gap: 12px; background: #fff; color: #2c7a2c;
+    font-weight: 800; font-size: 21px; padding: 15px 28px 17px; border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(10,50,10,.25); }
+  .cta svg { width: 24px; height: 24px; }
+
+  .card { position: absolute; width: 146px; height: 210px; border-radius: 22px; background: #fff;
+    box-shadow: 0 18px 34px rgba(10,50,12,.28); display: flex; align-items: flex-end; justify-content: center;
+    padding-bottom: 16px; font-size: 15px; font-weight: 700; color: #2d3a2d; }
+  .card img { position: absolute; left: 50%; transform: translateX(-50%);
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,.18)); }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="abs stripes"></div>
+  <div class="abs blob"></div>
+
+  <div class="conf" style="left:770px;  top:40px;  width:14px; height:14px; background:#ffd84d; transform:rotate(20deg)"></div>
+  <div class="conf" style="left:1490px; top:300px; width:12px; height:12px; background:#fff; border-radius:50%"></div>
+  <div class="conf" style="left:1120px; top:24px;  width:18px; height:7px;  background:#fff; transform:rotate(-30deg)"></div>
+  <div class="conf" style="left:800px;  top:330px; width:18px; height:7px;  background:#ffd84d; transform:rotate(40deg)"></div>
+  <div class="conf" style="left:1460px; top:44px;  width:10px; height:10px; background:#ffd84d; border-radius:50%"></div>
+  <div class="conf" style="left:640px;  top:60px;  width:10px; height:10px; background:rgba(255,255,255,.6); border-radius:50%"></div>
+
+  <div class="card" style="left:846px;  top:132px; transform:rotate(-5deg)">
+    <img src="assets/tv.png" style="width:192px; bottom:50px;">ტელევიზორი</div>
+  <div class="card" style="left:1006px; top:100px; transform:rotate(3deg)">
+    <img src="assets/phone.png" style="height:196px; bottom:46px;">მობილური</div>
+  <div class="card" style="left:1166px; top:140px; transform:rotate(-3deg)">
+    <img src="assets/mixer.png" style="height:176px; bottom:46px;">სამზარეულო</div>
+  <div class="card" style="left:1326px; top:104px; transform:rotate(5deg)">
+    <img src="assets/chair.png" style="height:168px; bottom:46px;">ავეჯი</div>
+
+  <div class="abs copy">
+    <h1>ᲤᲐᲡᲔᲑᲘ ᲓᲐᲔᲪᲐ!</h1>
+    <div class="sub">ტექნიკა<b></b>ავეჯი<b></b>სამზარეულო<b></b>დეკორი</div>
+    <div class="row">
+      <div class="sticker"><span class="num">-50%</span><span class="upto">-მდე</span></div>
+      <div class="cta">იყიდე ახლა
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

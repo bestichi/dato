@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>ბანერი 1 · სუფთა მწვანე</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .banner {
+    background:
+      radial-gradient(900px 520px at 1180px 230px, #dcefd6 0%, rgba(220,239,214,0) 70%),
+      linear-gradient(100deg, #ffffff 0%, #f7fbf5 40%, #eaf5e6 100%);
+  }
+  /* decorative shapes */
+  .disc { left: 900px; top: -40px; width: 520px; height: 520px; border-radius: 50%;
+    background: radial-gradient(circle at 40% 35%, #e9f6e5 0%, #d2eacb 70%, #c6e4bd 100%); }
+  .ring { left: 860px; top: -80px; width: 600px; height: 600px; border-radius: 50%;
+    border: 2px solid rgba(110,170,70,.35); }
+  .dots { left: 1450px; top: 28px; width: 120px; height: 90px;
+    background-image: radial-gradient(rgba(73,133,58,.35) 2px, transparent 2.5px);
+    background-size: 18px 18px; }
+  .floor { left: 760px; top: 340px; width: 760px; height: 70px; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(40,80,35,.20), rgba(40,80,35,0)); }
+
+  /* copy */
+  .copy { left: 150px; top: 0; height: 400px; width: 640px;
+    display: flex; flex-direction: column; justify-content: center; }
+  .pill { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px;
+    background: #e3f2de; color: #2f6e27; font-weight: 700; font-size: 17px;
+    padding: 8px 18px 9px; border-radius: 999px; }
+  .pill i { width: 9px; height: 9px; border-radius: 50%; background: #e53935;
+    box-shadow: 0 0 0 4px rgba(229,57,53,.18); }
+  h1 { margin-top: 16px; font-weight: 900; font-size: 82px; line-height: 1.02;
+    letter-spacing: -1px; color: #161a16; }
+  h1 span { color: #3f8f34; }
+  .sub { margin-top: 12px; font-size: 25px; font-weight: 500; color: #4b544b; }
+  .cta { margin-top: 30px; align-self: flex-start; display: inline-flex; align-items: center; gap: 14px;
+    background: linear-gradient(180deg, #57ab45, #3f8f34); color: #fff;
+    font-weight: 700; font-size: 21px; padding: 15px 30px 17px; border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(63,143,52,.35), inset 0 1px 0 rgba(255,255,255,.25); }
+  .cta svg { width: 24px; height: 24px; }
+
+  /* badge */
+  .badge { left: 782px; top: 30px; width: 168px; height: 168px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #ff5a4f, #d92b22 75%);
+    color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transform: rotate(-12deg); box-shadow: 0 14px 30px rgba(217,43,34,.35); }
+  .badge::before { content: ''; position: absolute; inset: 9px; border-radius: 50%;
+    border: 2px dashed rgba(255,255,255,.55); }
+  .badge .num { font-weight: 900; font-size: 52px; line-height: 1; letter-spacing: -2px; }
+  .badge .upto { font-weight: 800; font-size: 20px; margin-top: 2px; }
+  .badge .lbl { font-weight: 600; font-size: 14px; opacity: .9; margin-bottom: 4px; }
+
+  .product { filter: drop-shadow(0 16px 16px rgba(30,60,30,.18)); }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="abs ring"></div>
+  <div class="abs disc"></div>
+  <div class="abs dots"></div>
+  <div class="abs floor"></div>
+
+  <img class="product" src="assets/tv.png"      style="left:978px;  top:62px;  width:330px;">
+  <img class="product" src="assets/chair.png"   style="left:1272px; top:146px; height:226px;">
+  <img class="product" src="assets/pillows.png" style="left:792px;  top:246px; height:126px;">
+  <img class="product" src="assets/laptop.png"  style="left:898px;  top:226px; width:222px;">
+  <img class="product" src="assets/mixer.png"   style="left:1128px; top:200px; height:172px;">
+  <img class="product" src="assets/bowls.png"   style="left:1398px; top:292px; height:80px;">
+
+  <div class="abs badge">
+    <div class="lbl">ფასდაკლება</div>
+    <div class="num">-50%</div>
+    <div class="upto">-მდე</div>
+  </div>
+
+  <div class="abs copy">
+    <div class="pill"><i></i>ცხელი შეთავაზებები</div>
+    <h1><span>სუპერ</span> ფასები</h1>
+    <div class="sub">ტექნიკა, ავეჯი და ყველაფერი სახლისთვის</div>
+    <div class="cta">ნახე შეთავაზებები
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>ბანერი 4 · წითელი კლასიკა</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .banner {
+    background:
+      radial-gradient(600px 400px at 300px 380px, rgba(255,140,60,.35) 0%, rgba(255,140,60,0) 70%),
+      linear-gradient(110deg, #b71c1c 0%, #d9302c 45%, #f04a35 100%);
+  }
+  .burst { left: 900px; top: -300px; width: 1000px; height: 1000px; border-radius: 50%;
+    background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(255,255,255,.06) 0deg 6deg, transparent 6deg 18deg);
+    -webkit-mask-image: radial-gradient(closest-side, #000 40%, transparent 100%); }
+  .stage { left: 930px; top: 18px; width: 470px; height: 470px; border-radius: 50%;
+    background: radial-gradient(circle at 45% 30%, #ffffff 0%, #fff4ef 60%, #ffe3d8 100%);
+    box-shadow: 0 30px 60px rgba(90,0,0,.35), 0 0 0 14px rgba(255,255,255,.12), 0 0 0 30px rgba(255,255,255,.06); }
+  .ribbon { left: 1300px; top: 34px; background: #ffd84d; color: #7a1010; font-weight: 900; font-size: 18px;
+    padding: 8px 16px; border-radius: 10px; transform: rotate(10deg); box-shadow: 0 8px 18px rgba(80,0,0,.3); }
+
+  .copy { left: 150px; top: 0; height: 400px; width: 700px;
+    display: flex; flex-direction: column; justify-content: center; color: #fff; }
+  .eyebrow { align-self: flex-start; font-weight: 700; font-size: 17px; letter-spacing: .5px;
+    border: 1.5px solid rgba(255,255,255,.55); padding: 6px 16px 7px; border-radius: 999px; }
+  h1 { margin-top: 14px; font-weight: 900; font-size: 64px; line-height: 1.05; letter-spacing: -1px; white-space: nowrap;
+    text-shadow: 0 6px 18px rgba(90,0,0,.25); }
+  .deal { margin-top: 10px; display: flex; align-items: center; gap: 18px; }
+  .deal .lbl { font-size: 24px; font-weight: 700; color: rgba(255,255,255,.92); }
+  .deal .bar { width: 2px; height: 56px; background: rgba(255,255,255,.4); }
+  .deal .num { font-weight: 900; font-size: 84px; line-height: 1; letter-spacing: -3px; color: #ffd84d;
+    text-shadow: 0 6px 0 rgba(120,10,10,.35); }
+  .deal .upto { font-size: 30px; font-weight: 800; margin-left: -10px; align-self: flex-end; margin-bottom: 12px; }
+  .cta { margin-top: 20px; align-self: flex-start; display: inline-flex; align-items: center; gap: 14px;
+    background: #ffd84d; color: #5a0e0e; font-weight: 800; font-size: 21px;
+    padding: 15px 30px 17px; border-radius: 14px; box-shadow: 0 8px 0 #d9ad2a, 0 16px 28px rgba(80,0,0,.3); }
+  .cta svg { width: 24px; height: 24px; }
+
+  .product { filter: drop-shadow(0 16px 16px rgba(90,20,10,.25)); }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="abs burst"></div>
+  <div class="abs stage"></div>
+
+  <img class="product" src="assets/tv.png"      style="left:1010px; top:66px;  width:310px;">
+  <img class="product" src="assets/pillows.png" style="left:930px;  top:240px; height:130px;">
+  <img class="product" src="assets/laptop.png"  style="left:1060px; top:238px; width:200px;">
+  <img class="product" src="assets/chair.png"   style="left:1250px; top:170px; height:200px;">
+  <img class="product" src="assets/bowls.png"   style="left:1210px; top:300px; height:72px;">
+
+  <div class="abs ribbon">ᲐᲥᲪᲘᲐ</div>
+
+  <div class="abs copy">
+    <div class="eyebrow">superi.ge · შეთავაზებები</div>
+    <h1>საუკეთესო ფასები</h1>
+    <div class="deal">
+      <span class="lbl">ფასდაკლება</span><span class="bar"></span>
+      <span class="num">-50%</span><span class="upto">-მდე</span>
+    </div>
+    <div class="cta">იყიდე ახლა
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
+  </div>
+</div>
+</body>
+</html>

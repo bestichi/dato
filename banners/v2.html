@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>ბანერი 2 · მუქი პრემიუმი</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .banner {
+    background:
+      radial-gradient(560px 360px at 1150px 250px, rgba(110,190,70,.38) 0%, rgba(110,190,70,0) 70%),
+      radial-gradient(500px 300px at 120px 40px, rgba(140,191,75,.12) 0%, rgba(140,191,75,0) 70%),
+      linear-gradient(100deg, #0d110e 0%, #141a15 55%, #0f1510 100%);
+  }
+  .lines { inset: 0; left: 760px;
+    background: repeating-linear-gradient(115deg, rgba(255,255,255,.035) 0 1px, transparent 1px 26px);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 30%, #000 80%, transparent); }
+  .arc { left: 880px; top: -170px; width: 560px; height: 560px; border-radius: 50%;
+    border: 1.5px solid rgba(160,220,100,.28); }
+  .arc.b { left: 830px; top: -220px; width: 660px; height: 660px; border-color: rgba(160,220,100,.12); }
+
+  .podium { left: 860px; top: 318px; width: 600px; height: 74px; border-radius: 50%;
+    background: radial-gradient(closest-side, #2a3a2b 0%, #18211a 70%, #121813 100%);
+    box-shadow: 0 -2px 0 rgba(170,230,110,.55), 0 0 40px rgba(140,210,80,.35); }
+  .podium::after { content: ''; position: absolute; inset: 10px 40px; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(150,220,90,.25), rgba(150,220,90,0)); }
+
+  .copy { left: 150px; top: 0; height: 400px; width: 640px;
+    display: flex; flex-direction: column; justify-content: center; }
+  .eyebrow { color: #a6dc5f; font-weight: 800; font-size: 22px; letter-spacing: 5px; }
+  .big { display: flex; align-items: flex-end; gap: 10px; margin-top: 2px; }
+  .big .num { font-weight: 900; font-size: 168px; line-height: .86; letter-spacing: -6px;
+    background: linear-gradient(180deg, #d7f78f 0%, #8fd44f 45%, #4f9e3b 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 8px 24px rgba(120,200,70,.30)); padding-right: 6px; }
+  .big .upto { color: #fff; font-weight: 800; font-size: 40px; margin-bottom: 14px; }
+  .sub { margin-top: 16px; font-size: 25px; font-weight: 500; color: rgba(255,255,255,.78); }
+  .cta { margin-top: 26px; align-self: flex-start; display: inline-flex; align-items: center; gap: 14px;
+    background: linear-gradient(180deg, #a9e05f, #7fc243); color: #102010;
+    font-weight: 800; font-size: 21px; padding: 15px 30px 17px; border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(140,210,80,.30), inset 0 1px 0 rgba(255,255,255,.4); }
+  .cta svg { width: 24px; height: 24px; }
+
+  .product { filter: drop-shadow(0 18px 22px rgba(0,0,0,.55)); }
+  .spark { width: 6px; height: 6px; border-radius: 50%; background: #c6f27e;
+    box-shadow: 0 0 12px 3px rgba(170,235,100,.6); }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="abs lines"></div>
+  <div class="abs arc b"></div>
+  <div class="abs arc"></div>
+  <div class="abs podium"></div>
+
+  <img class="product" src="assets/tv.png"     style="left:990px;  top:52px;  width:340px;">
+  <img class="product" src="assets/phone.png"  style="left:878px;  top:132px; height:218px;">
+  <img class="product" src="assets/laptop.png" style="left:1060px; top:222px; width:226px;">
+  <img class="product" src="assets/mixer.png"  style="left:1268px; top:170px; height:180px;">
+
+  <div class="abs spark" style="left:930px;  top:70px;"></div>
+  <div class="abs spark" style="left:1420px; top:110px; transform:scale(.7)"></div>
+  <div class="abs spark" style="left:1370px; top:40px;  transform:scale(.5)"></div>
+  <div class="abs spark" style="left:850px;  top:300px; transform:scale(.6)"></div>
+
+  <div class="abs copy">
+    <div class="eyebrow">ᲛᲔᲒᲐ ᲤᲐᲡᲓᲐᲙᲚᲔᲑᲐ</div>
+    <div class="big"><span class="num">-50%</span><span class="upto">-მდე</span></div>
+    <div class="sub">ტექნიკასა და სახლის ნივთებზე</div>
+    <div class="cta">იყიდე ახლა
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
+  </div>
+</div>
+</body>
+</html>

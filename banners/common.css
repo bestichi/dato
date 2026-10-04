@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Noto Sans Georgian';
+  font-weight: 100 900;
+  font-stretch: 62.5% 100%;
+  src: url(assets/fonts/NotoSansGeorgian.woff2) format('woff2');
+  unicode-range: U+0589, U+10A0-10FF, U+1C90-1CBA, U+1CBD-1CBF, U+205A, U+2D00-2D2F, U+2E31;
+}
+@font-face {
+  font-family: 'Noto Sans Georgian';
+  font-weight: 100 900;
+  font-stretch: 62.5% 100%;
+  src: url(assets/fonts/NotoSansGeorgian-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+2000-206F, U+20AC, U+2122, U+2190-2199;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 100 900;
+  src: url(assets/fonts/Montserrat.woff2) format('woff2');
+}
+
+/* Banner canvas: 1600x400 CSS px, exported at 2x = 3200x800 (same as the current site banner). */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1600px; height: 400px; overflow: hidden; }
+body { font-family: 'Noto Sans Georgian', sans-serif; -webkit-font-smoothing: antialiased; }
+.banner { position: relative; width: 1600px; height: 400px; overflow: hidden; }
+.abs { position: absolute; }
+.product { position: absolute; display: block; }
+.num { font-family: 'Montserrat', sans-serif; }
