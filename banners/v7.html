@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>ბანერი 7 · Bento ბადე</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  :root { --base: #e7eae3; --green: #0f2a1b; --lime: #c3ec4f; --ink: #0d120e; }
+  .banner { background: var(--base); }
+  .tile { position: absolute; border-radius: 26px; overflow: hidden; }
+  .tile .lbl { position: absolute; left: 22px; top: 20px; font-size: 15px; font-weight: 700; color: var(--ink); }
+  .tile .go { position: absolute; right: 18px; top: 16px; width: 34px; height: 34px; border-radius: 50%;
+    background: rgba(13,18,14,.08); display: grid; place-items: center; }
+  .tile .go svg { width: 16px; height: 16px; }
+  .tile img { position: absolute; filter: drop-shadow(0 16px 16px rgba(20,30,20,.22)); }
+
+  /* headline tile */
+  .t1 { left: 40px; top: 26px; width: 560px; height: 348px; background: var(--green); color: #fff;
+    padding: 42px 44px 40px; display: flex; flex-direction: column; justify-content: space-between; }
+  .t1::after { content: ''; position: absolute; right: -120px; top: -140px; width: 380px; height: 380px; border-radius: 50%;
+    border: 1.5px solid rgba(195,236,79,.22); }
+  .t1 .h1 { font-size: 66px; line-height: 1; font-weight: 300; letter-spacing: .5px; }
+  .t1 .h1 b { display: block; font-weight: 800; color: var(--lime); }
+  .t1 .sub { margin-top: 14px; font-size: 19px; font-weight: 400; color: rgba(255,255,255,.72); }
+  .t1 .cta { align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; background: var(--lime);
+    color: var(--ink); font-weight: 700; font-size: 18px; padding: 15px 24px 16px; border-radius: 999px; }
+  .t1 .cta svg { width: 20px; height: 20px; }
+
+  /* discount tile */
+  .t2 { left: 612px; top: 26px; width: 260px; height: 348px; background: var(--lime); color: var(--ink);
+    padding: 26px 24px; display: flex; flex-direction: column; justify-content: space-between; }
+  .t2 .k { font-size: 15px; font-weight: 700; letter-spacing: 2px; }
+  .t2 .n { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 88px; line-height: .9; letter-spacing: -5px; }
+  .t2 .m { font-size: 30px; font-weight: 800; margin-top: 4px; }
+  .t2 .arrow { position: absolute; right: 22px; top: 20px; width: 52px; height: 52px; border-radius: 50%;
+    background: var(--ink); display: grid; place-items: center; }
+  .t2 .arrow svg { width: 24px; height: 24px; }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="t1 tile">
+    <div>
+      <div class="h1">ᲤᲐᲡᲔᲑᲘ <b>ᲓᲐᲔᲪᲐ</b></div>
+      <div class="sub">ტექნიკა, ავეჯი და ყველაფერი სახლისთვის</div>
+    </div>
+    <div class="cta">ნახე შეთავაზებები
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
+  </div>
+
+  <div class="t2 tile">
+    <div class="k">ᲤᲐᲡᲓᲐᲙᲚᲔᲑᲐ</div>
+    <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#c3ec4f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 8v9H8"/></svg></div>
+    <div><div class="n">-50%</div><div class="m">ᲛᲓᲔ</div></div>
+  </div>
+
+  <div class="tile" style="left:884px; top:26px; width:300px; height:168px; background:#f6f1e7;">
+    <div class="lbl">სათამაშოები</div>
+    <div class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#0d120e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
+    <img src="assets/lego.png" style="right:66px; bottom:-12px; height:150px;">
+  </div>
+
+  <div class="tile" style="left:884px; top:206px; width:300px; height:168px; background:#fde4df;">
+    <div class="lbl">მტვერსასრუტები</div>
+    <div class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#0d120e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
+    <img src="assets/vacuum.png" style="right:22px; bottom:-40px; height:164px;">
+  </div>
+
+  <div class="tile" style="left:1196px; top:26px; width:364px; height:348px; background:#ffffff;">
+    <div class="lbl">სახლის ტექნიკა</div>
+    <div class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#0d120e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
+    <img src="assets/fridge.png"  style="right:40px; bottom:-8px; height:300px;">
+    <img src="assets/coffee2.png" style="left:36px; bottom:18px; height:204px;">
+  </div>
+</div>
+</body>
+</html>
