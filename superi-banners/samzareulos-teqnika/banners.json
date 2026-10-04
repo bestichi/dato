@@ -1,0 +1,90 @@
+{
+ "category": "სამზარეულოს ტექნიკა",
+ "category_url": "https://superi.ge/samzarelos-teqnika/",
+ "items": [
+  {
+   "file": "01-yavis-aparatebi",
+   "label": "ყავის აპარატები",
+   "url": "https://superi.ge/yavis-aparatebi/",
+   "src": "https://superi.ge/images/detailed/50/368faa9a.jpg",
+   "sr": false
+  },
+  {
+   "file": "02-eleqtro-chaidnebi",
+   "label": "ელექტრო ჩაიდნები",
+   "url": "https://superi.ge/eleqtro-chaidnebi/",
+   "src": "https://superi.ge/images/detailed/41/17778272_eCommerce_HC_K15_TWK4P439_BPlus_PowerImage.webp",
+   "sr": false
+  },
+  {
+   "file": "03-mikrotalghuri-ghumelebi",
+   "label": "მიკროტალღური ღუმელები",
+   "url": "https://superi.ge/mikrotalghuri-ghumelebi/",
+   "src": "https://superi.ge/images/detailed/13/69736lt_mw5100j_solo_mwo_with_food_warming_23l_ms23j5133ak_ba_38825756759_enl.jpg",
+   "sr": false
+  },
+  {
+   "file": "04-miqserebi",
+   "label": "მიქსერები",
+   "url": "https://superi.ge/miqserebi/",
+   "src": "https://superi.ge/images/detailed/56/product-001-01_3qvt-qm.webp",
+   "sr": false
+  },
+  {
+   "file": "05-eleqtro-ghumelebi",
+   "label": "ელექტრო ღუმელები",
+   "url": "https://superi.ge/eleqtro-gumelebi/",
+   "src": "https://superi.ge/images/detailed/15/74980.jpg",
+   "sr": false
+  },
+  {
+   "file": "06-wvensawurebi",
+   "label": "წვენსაწურები",
+   "url": "https://superi.ge/tsvensatsurebi/",
+   "src": "https://superi.ge/images/detailed/57/product-001-01_ko50-8h.webp",
+   "sr": false
+  },
+  {
+   "file": "07-blenderebi",
+   "label": "ბლენდერები",
+   "url": "https://superi.ge/blenderebi/",
+   "src": "https://superi.ge/images/detailed/17/exec-740fbe78-ed22-4dc2-8afe-fe74f10c49a1.png",
+   "sr": false
+  },
+  {
+   "file": "08-aerogrili",
+   "label": "აეროგრილი",
+   "url": "https://superi.ge/aerogrilebi/",
+   "src": "https://superi.ge/images/detailed/21/369dfe25-a968-4117-a890-99b3c8c9a43f.jpg",
+   "sr": true
+  },
+  {
+   "file": "09-xorcsakepi-manqanebi",
+   "label": "ხორცსაკეპი მანქანები",
+   "url": "https://superi.ge/xorcis-sakepi-manqanebi/",
+   "src": "https://superi.ge/images/detailed/26/150250-1920x1080.jpg",
+   "sr": false
+  },
+  {
+   "file": "10-tosteri",
+   "label": "ტოსტერი",
+   "url": "https://superi.ge/tosteri/",
+   "src": "https://superi.ge/images/detailed/23/ტოსტერი.png",
+   "sr": false
+  },
+  {
+   "file": "11-samzareulos-kombainebi",
+   "label": "სამზარეულოს კომბაინები",
+   "url": "https://superi.ge/samzareulos-kombainebi/",
+   "src": "https://superi.ge/images/detailed/50/images.jpg",
+   "sr": true
+  },
+  {
+   "file": "12-choferebi",
+   "label": "ჩოფერები",
+   "url": "https://superi.ge/choferebi/",
+   "src": "https://superi.ge/images/detailed/50/0082679_choferi-uzhangavi-metalis-2l-300w-kemg011b-decakila_600.png",
+   "sr": true
+  }
+ ]
+}

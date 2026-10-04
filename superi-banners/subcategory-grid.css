@@ -1,0 +1,7 @@
+/* superi.ge — subcategory grid: less spacing, 6 per row on wide screens.
+   Add to the theme's Custom CSS. Tablets and phones keep the theme's 4 / 3 / 2 per row. */
+.ty-subcategories__item.cat-img { padding: 6px; }
+.ty-subcategories__item.cat-img .ty-subcategories-img { padding: 0 0 8px; }
+@media (min-width: 1280px) {
+  .ty-subcategories__item.cat-img { width: 16.666667%; }
+}
