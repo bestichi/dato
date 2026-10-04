@@ -1,7 +1,26 @@
-/* superi.ge — subcategory grid: less spacing, 6 per row on wide screens.
-   Add to the theme's Custom CSS. Tablets and phones keep the theme's 4 / 3 / 2 per row. */
-.ty-subcategories__item.cat-img { padding: 6px; }
-.ty-subcategories__item.cat-img .ty-subcategories-img { padding: 0 0 8px; }
+/* superi.ge — subcategory grid: 6 per row on wide screens, tight spacing, alta.ge-style hover.
+   Paste into the theme's Custom CSS, replacing the earlier snippet.
+   Tablets and phones keep the theme's 4 / 3 / 2 per row. */
+.subcategories .ty-subcategories__item.cat-img { padding: 6px; }
 @media (min-width: 1280px) {
-  .ty-subcategories__item.cat-img { width: 16.666667%; }
+  .subcategories .ty-subcategories__item.cat-img { width: 16.666667%; }
+}
+
+/* no grey frame and no underline from the theme */
+.subcategories .ty-subcategories__item.cat-img:hover { border-color: transparent; box-shadow: none; }
+.subcategories .ty-subcategories__item.cat-img:hover span { text-decoration: none; }
+
+/* card: slow, subtle lift with a thin violet edge */
+.subcategories .ty-subcategories__item.cat-img .ty-subcategories-img {
+  padding: 0;
+  margin: 0 auto 8px;
+  border-radius: 8%;
+  transition: transform .45s ease, box-shadow .45s ease;
+}
+.subcategories .ty-subcategories__item.cat-img:hover .ty-subcategories-img {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 2px 2px 2px #b39ce3;
+}
+@media (prefers-reduced-motion: reduce) {
+  .subcategories .ty-subcategories__item.cat-img .ty-subcategories-img { transition: none; }
 }
