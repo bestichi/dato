@@ -14,6 +14,7 @@ alta.ge-ს სტილში, ყველა კატეგორიის�
 |---|---|
 | [სამზარეულოს ტექნიკა](https://superi.ge/samzarelos-teqnika/) | [samzareulos-teqnika](samzareulos-teqnika/) |
 | [ტელეფონები, ტაბლეტები](https://superi.ge/telefonebi-tabletebi/) | [telefonebi-tabletebi](telefonebi-tabletebi/) |
+| [TV-ფოტო-ვიდეო](https://superi.ge/tv/) | [tv-foto-video](tv-foto-video/) |
 
 ## ბადე და hover: 6 ბანერი ერთ რიგში, ალტასავით
 

@@ -1,0 +1,38 @@
+{
+ "category": "TV-ფოტო-ვიდეო",
+ "category_url": "https://superi.ge/tv/",
+ "items": [
+  {
+   "file": "01-televizorebi",
+   "label": "ტელევიზორები",
+   "url": "https://superi.ge/televizorebi/",
+   "src": "https://superi.ge/images/detailed/32/1990cf2796a93ab1a0ba2fa9e70baa83a7140412b2fbbf66240c4133682b2ce1.jpg_ao1h-ce.webp",
+   "sr": false,
+   "product": "LG OLED65C5RLA"
+  },
+  {
+   "file": "02-fotoaparatebi",
+   "label": "ფოტოაპარატები",
+   "url": "https://superi.ge/fotoaparatebi/",
+   "src": "https://superi.ge/images/detailed/21/81F3HiMFxdL._AC_SL1500_.jpg",
+   "sr": false,
+   "product": "Canon EOS R10 RF-S 18-45mm"
+  },
+  {
+   "file": "03-televizoris-aqsesuarebi",
+   "label": "ტელევიზორის აქსესუარები",
+   "url": "https://superi.ge/televizoris-aqsesuarebi/",
+   "src": "https://superi.ge/images/detailed/57/product-001-01_uarh-x7.webp",
+   "sr": false,
+   "product": "Sony HT-S400"
+  },
+  {
+   "file": "04-droni",
+   "label": "დრონი",
+   "url": "https://superi.ge/droni/",
+   "src": "https://superi.ge/images/detailed/31/dji-air-3s-fly-more-combo-dji-rc-2-172897553785730304.webp",
+   "sr": false,
+   "product": "DJI Air 3S"
+  }
+ ]
+}
