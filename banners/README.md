@@ -28,5 +28,11 @@ NODE_PATH=$(npm root -g) node render.mjs v2       # მხოლოდ ერთ
 python3 -c "from PIL import Image; Image.open('out/v2.png').convert('RGB').save('out/v2.webp', quality=86, method=6)"
 ```
 
+საიტზე როგორ გამოჩნდება (ცოცხალ superi.ge-ზე მხოლოდ მთავარ ბანერს ცვლის, სკრინშოტი → `out/site-vN.png`):
+
+```sh
+NODE_PATH=$(npm root -g) node preview.mjs
+```
+
 შრიფტები: Noto Sans Georgian და Montserrat (OFL ლიცენზია), `assets/fonts`-შია.
 პროდუქტების სურათები superi.ge-ის კატეგორიების ბანერებიდანაა აღებული.
