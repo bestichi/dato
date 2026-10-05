@@ -1,11 +1,10 @@
 -- ============================================================================
--- superi.ge — სუსტი URL-ები, Thomson-ის არეული მისამართები, Sencor-ის 404 და სახელების შეცდომები
+-- superi.ge — სუსტი URL-ები, Sencor-ის 404 და სახელების შეცდომები
 -- 1) 85 პროდუქტს ეძლევა აღწერითი მისამართი (/2/, /product-8910/, /180-aa-180/, ზედმეტი -ka …).
 --    ძველი მისამართი 301-ით გადადის ახალზე. თუ ახალი მისამართი სხვა აქტიურ გვერდს უკავია, ეს პროდუქტი გამოტოვდება.
--- 2) Thomson: 50" და 55" ტელევიზორებს მისამართები ერთმანეთში ჰქონდათ არეული — ადგილს ვუცვლით.
--- 3) Sencor SVC 7221BK: /sencor-svc-7221bk-ka/ და /product-13985/ (404) -> 301 დარჩენილ პროდუქტზე (13986).
--- 4) სახელების შეცდომები: ავაჯის, კონტრუქცით, REGAL REGAL, აუზი აუზი, I(FX608JMI …
--- 5) სათაურების ბოლოში "| SUPERI.GE" -> "| Superi.ge" (ერთნაირი ბრენდი ყველგან).
+-- 2) Sencor SVC 7221BK: /sencor-svc-7221bk-ka/ და /product-13985/ (404) -> 301 დარჩენილ პროდუქტზე (13986).
+-- 3) სახელების შეცდომები: ავაჯის, კონტრუქცით, REGAL REGAL, აუზი აუზი, I(FX608JMI …
+-- 4) სათაურების ბოლოში "| SUPERI.GE" -> "| Superi.ge" (ერთნაირი ბრენდი ყველგან).
 -- ასლები: superi_bk_seo_14, superi_bk_desc_14, superi_bk_titles_14. დაბრუნება ბოლოშია.
 -- გაშვების შემდეგ: ქეშის გასუფთავება და sitemap-ის თავიდან გენერაცია (AB: Advanced sitemap).
 -- ============================================================================
@@ -119,18 +118,13 @@ DELETE r FROM cscart_seo_redirects r JOIN tmp_slug t ON TRIM(BOTH '/' FROM r.src
 INSERT IGNORE INTO cscart_seo_redirects (src, type, object_id, lang_code, company_id) SELECT CONCAT(@pre, t.old_name, @post), 'p', t.pid, 'ka', 1 FROM tmp_slug t WHERE t.ok = 1;
 UPDATE cscart_seo_names s JOIN tmp_slug t ON t.pid = s.object_id AND t.old_name = s.name AND t.ok = 1 SET s.name = t.new_name WHERE s.type = 'p' AND s.lang_code = 'ka' AND s.company_id = 1;
 
--- 2) Thomson: 5157 = 50UG4S14 (127 სმ), 5158 = 55UG4S14 (140 სმ) — მისამართების გაცვლა
-UPDATE cscart_seo_names SET name = 'tmp-swap-5157' WHERE type = 'p' AND object_id = 5157 AND name = 'thomson-55ug4s14-140' AND lang_code = 'ka' AND company_id = 1;
-UPDATE cscart_seo_names SET name = 'thomson-55ug4s14-140' WHERE type = 'p' AND object_id = 5158 AND name = 'thomson-50ug4s14-127' AND lang_code = 'ka' AND company_id = 1 AND EXISTS (SELECT 1 FROM (SELECT name FROM cscart_seo_names WHERE name = 'tmp-swap-5157') x);
-UPDATE cscart_seo_names SET name = 'thomson-50ug4s14-127' WHERE type = 'p' AND object_id = 5157 AND name = 'tmp-swap-5157' AND lang_code = 'ka' AND company_id = 1 AND NOT EXISTS (SELECT 1 FROM (SELECT name FROM cscart_seo_names WHERE name = 'thomson-50ug4s14-127') x);
-UPDATE cscart_seo_names SET name = 'thomson-55ug4s14-140' WHERE type = 'p' AND object_id = 5157 AND name = 'tmp-swap-5157' AND lang_code = 'ka' AND company_id = 1;
 
--- 3) Sencor: ძველი მისამართები -> 13986
+-- 2) Sencor: ძველი მისამართები -> 13986
 UPDATE cscart_seo_names s JOIN cscart_products p ON p.product_id = s.object_id SET s.name = CONCAT('dup-', s.object_id) WHERE s.type = 'p' AND s.company_id = 1 AND p.status <> 'A' AND s.name IN ('sencor-svc-7221bk-ka', 'product-13985');
 DELETE FROM cscart_seo_redirects WHERE company_id = 1 AND TRIM(BOTH '/' FROM src) IN ('sencor-svc-7221bk-ka', 'product-13985');
 INSERT IGNORE INTO cscart_seo_redirects (src, type, object_id, lang_code, company_id) SELECT CONCAT(@pre, x.n, @post), 'p', 13986, 'ka', 1 FROM (SELECT 'sencor-svc-7221bk-ka' AS n UNION ALL SELECT 'product-13985') x WHERE NOT EXISTS (SELECT 1 FROM cscart_seo_names s WHERE s.name = x.n);
 
--- 4) სახელების შეცდომები (სახელი, სათაური, მეტა აღწერა, აღწერები) — მხოლოდ ამ პროდუქტებში
+-- 3) სახელების შეცდომები (სახელი, სათაური, მეტა აღწერა, აღწერები) — მხოლოდ ამ პროდუქტებში
 UPDATE cscart_product_descriptions SET product = REPLACE(product, 'ავაჯის', 'ავეჯის'), page_title = REPLACE(page_title, 'ავაჯის', 'ავეჯის'), meta_description = REPLACE(meta_description, 'ავაჯის', 'ავეჯის'), short_description = REPLACE(short_description, 'ავაჯის', 'ავეჯის'), full_description = REPLACE(full_description, 'ავაჯის', 'ავეჯის') WHERE product_id = 8916 AND lang_code = 'ka';
 UPDATE cscart_product_descriptions SET product = REPLACE(product, 'ავაჯის', 'ავეჯის'), page_title = REPLACE(page_title, 'ავაჯის', 'ავეჯის'), meta_description = REPLACE(meta_description, 'ავაჯის', 'ავეჯის'), short_description = REPLACE(short_description, 'ავაჯის', 'ავეჯის'), full_description = REPLACE(full_description, 'ავაჯის', 'ავეჯის') WHERE product_id = 8934 AND lang_code = 'ka';
 UPDATE cscart_product_descriptions SET product = REPLACE(product, 'კონტრუქცით', 'კონსტრუქციით'), page_title = REPLACE(page_title, 'კონტრუქცით', 'კონსტრუქციით'), meta_description = REPLACE(meta_description, 'კონტრუქცით', 'კონსტრუქციით'), short_description = REPLACE(short_description, 'კონტრუქცით', 'კონსტრუქციით'), full_description = REPLACE(full_description, 'კონტრუქცით', 'კონსტრუქციით') WHERE product_id = 8911 AND lang_code = 'ka';
@@ -141,11 +135,11 @@ UPDATE cscart_product_descriptions SET product = REPLACE(product, 'REGAL REGAL',
 UPDATE cscart_product_descriptions SET product = REPLACE(product, 'აუზი აუზი', 'აუზი'), page_title = REPLACE(page_title, 'აუზი აუზი', 'აუზი'), meta_description = REPLACE(meta_description, 'აუზი აუზი', 'აუზი'), short_description = REPLACE(short_description, 'აუზი აუზი', 'აუზი'), full_description = REPLACE(full_description, 'აუზი აუზი', 'აუზი') WHERE product_id = 1313 AND lang_code = 'ka';
 UPDATE cscart_product_descriptions SET product = REPLACE(product, '165Hz I(FX608JMI', '165Hz (FX608JMI'), page_title = REPLACE(page_title, '165Hz I(FX608JMI', '165Hz (FX608JMI'), meta_description = REPLACE(meta_description, '165Hz I(FX608JMI', '165Hz (FX608JMI'), short_description = REPLACE(short_description, '165Hz I(FX608JMI', '165Hz (FX608JMI'), full_description = REPLACE(full_description, '165Hz I(FX608JMI', '165Hz (FX608JMI') WHERE product_id = 14031 AND lang_code = 'ka';
 
--- 5) სათაურებში ბრენდი ერთნაირად
+-- 4) სათაურებში ბრენდი ერთნაირად
 UPDATE cscart_product_descriptions SET page_title = REPLACE(page_title, '| SUPERI.GE', '| Superi.ge') WHERE lang_code = 'ka' AND page_title LIKE '%| SUPERI.GE%';
 
--- 6) შედეგი
-SELECT (SELECT COUNT(*) FROM tmp_slug) AS slugs_in_file, (SELECT COUNT(*) FROM tmp_slug WHERE ok = 1) AS slugs_renamed, (SELECT COUNT(*) FROM tmp_slug WHERE ok = 2) AS already_done, (SELECT IFNULL(GROUP_CONCAT(old_name SEPARATOR ', '), '-') FROM tmp_slug WHERE ok = 0) AS slugs_skipped, (SELECT GROUP_CONCAT(CONCAT(object_id, '=', name) SEPARATOR ', ') FROM cscart_seo_names WHERE type = 'p' AND object_id IN (5157, 5158) AND lang_code = 'ka') AS thomson, (SELECT COUNT(*) FROM cscart_seo_redirects WHERE TRIM(BOTH '/' FROM src) IN ('sencor-svc-7221bk-ka', 'product-13985') AND object_id = 13986) AS sencor_redirects, (SELECT COUNT(*) FROM cscart_product_descriptions WHERE lang_code = 'ka' AND page_title LIKE BINARY '%| SUPERI.GE%') AS titles_uppercase_left;
+-- 5) შედეგი
+SELECT (SELECT COUNT(*) FROM tmp_slug) AS slugs_in_file, (SELECT COUNT(*) FROM tmp_slug WHERE ok = 1) AS slugs_renamed, (SELECT COUNT(*) FROM tmp_slug WHERE ok = 2) AS already_done, (SELECT IFNULL(GROUP_CONCAT(old_name SEPARATOR ', '), '-') FROM tmp_slug WHERE ok = 0) AS slugs_skipped, (SELECT COUNT(*) FROM cscart_seo_redirects WHERE TRIM(BOTH '/' FROM src) IN ('sencor-svc-7221bk-ka', 'product-13985') AND object_id = 13986) AS sencor_redirects, (SELECT COUNT(*) FROM cscart_product_descriptions WHERE lang_code = 'ka' AND page_title LIKE BINARY '%| SUPERI.GE%') AS titles_uppercase_left;
 DROP TEMPORARY TABLE IF EXISTS tmp_slug;
 
 -- ============================================================================
