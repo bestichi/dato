@@ -1,0 +1,77 @@
+{literal}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://superi.ge/#organization",
+      "name": "Superi.ge",
+      "alternateName": ["სუპერი", "Superi"],
+      "legalName": "შპს „ბესთ სოლუშენ 2022“",
+      "taxID": "430806648",
+      "url": "https://superi.ge/",
+      "logo": "https://superi.ge/images/logos/31/superi_logo_z18q-9x.png",
+      "foundingDate": "2016",
+      "email": "info@superi.ge",
+      "telephone": "+995 32 2 04 44 44",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "მუხრან მაჭავარიანის 62",
+        "addressLocality": "თბილისი",
+        "postalCode": "02116",
+        "addressCountry": "GE"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+995 32 2 04 44 44",
+          "email": "info@superi.ge",
+          "areaServed": "GE",
+          "availableLanguage": "ka",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "21:00"
+          }
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "telephone": "+995 592 444 000",
+          "areaServed": "GE",
+          "availableLanguage": "ka"
+        }
+      ],
+      "sameAs": ["https://www.facebook.com/Superi.ge"],
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "GE",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 14,
+        "merchantReturnLink": "https://superi.ge/dabruneba/"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://superi.ge/#website",
+      "url": "https://superi.ge/",
+      "name": "Superi.ge",
+      "alternateName": ["სუპერი", "Superi"],
+      "inLanguage": "ka",
+      "publisher": {"@id": "https://superi.ge/#organization"},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://superi.ge/index.php?dispatch=products.search&search_performed=Y&q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
+{/literal}
