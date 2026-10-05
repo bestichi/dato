@@ -4,6 +4,8 @@
 download the photo from superi.ge → optional 2× EDSR super-resolution (`"sr": true`) →
 background mask with BiRefNet (photo padded with 12% white first) → card render.
 Style constants live at the top of the script; keep them unchanged so every category matches.
+For a broad category, an item can list several products under `"parts"` (height, centre x, lift y,
+in shared units, back to front); front products cast a soft shadow on the ones behind.
 
 ```sh
 pip install pillow numpy onnxruntime opencv-contrib-python-headless

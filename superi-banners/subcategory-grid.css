@@ -24,3 +24,6 @@
 @media (prefers-reduced-motion: reduce) {
   .subcategories .ty-subcategories__item.cat-img .ty-subcategories-img { transition: none; }
 }
+
+/* show long names in full (the theme cuts them after 3 lines) */
+.subcategories .ty-subcategories__item.cat-img img + span { height: auto; min-height: 50px; }

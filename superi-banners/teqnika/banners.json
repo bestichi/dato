@@ -1,0 +1,145 @@
+{
+ "category": "ტექნიკა",
+ "category_url": "https://superi.ge/teqnika/",
+ "items": [
+  {
+   "file": "01-telefonebi-tabletebi",
+   "label": "ტელეფონები, ტაბლეტები, ელექტრონული წიგნები",
+   "url": "https://superi.ge/telefonebi-tabletebi/",
+   "parts": [
+    {
+     "src": "https://superi.ge/images/detailed/8/2bf2ce0f-04ee-42d9-ab59-c9a04abb08bb.png",
+     "h": 1.0,
+     "x": 0.0
+    },
+    {
+     "src": "https://superi.ge/images/detailed/38/580d6074-3081-4c10-827b-66b16e86bbb2.png",
+     "h": 0.9,
+     "x": 0.62
+    }
+   ]
+  },
+  {
+   "file": "02-tv-foto-video",
+   "label": "TV-ფოტო-ვიდეო",
+   "url": "https://superi.ge/tv/",
+   "src": "https://superi.ge/images/detailed/32/1990cf2796a93ab1a0ba2fa9e70baa83a7140412b2fbbf66240c4133682b2ce1.jpg_ao1h-ce.webp",
+   "sr": false
+  },
+  {
+   "file": "03-klimaturi-teqnika",
+   "label": "კლიმატური ტექნიკა",
+   "url": "https://superi.ge/klimaturi-teqnika/",
+   "parts": [
+    {
+     "src": "https://superi.ge/images/detailed/42/vrs_ee7ce3a5_a670_4994_94ae8bef4fe9c3e7-1.webp",
+     "h": 1.0,
+     "x": 0.0
+    },
+    {
+     "src": "https://superi.ge/images/detailed/17/17734011_B1ZMI09629_STP_def.webp",
+     "h": 0.3,
+     "x": 0.62,
+     "y": 0.7
+    },
+    {
+     "src": "https://superi.ge/images/detailed/44/c56f2864-0372-46c1-b0bc-31a130935022.png",
+     "h": 0.62,
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "file": "04-sakopatskhovrebo-teqnika",
+   "label": "საყოფაცხოვრებო ტექნიკა",
+   "url": "https://superi.ge/sakopatskhovrebo-teqnika/",
+   "parts": [
+    {
+     "src": "https://superi.ge/images/detailed/24/22116771_KGN39XI30U_STP_def.webp",
+     "h": 1.0,
+     "x": 0.0
+    },
+    {
+     "src": "https://superi.ge/images/detailed/40/26708065_WAN28201ME_STP_def.webp",
+     "h": 0.5,
+     "x": 0.36
+    }
+   ]
+  },
+  {
+   "file": "05-noutbuqebi-kompiuterebi-monitorebi",
+   "label": "ნოუთბუქები, კომპიუტერები, მონიტორები",
+   "url": "https://superi.ge/noutbuqebi-kompiuterebi-monitorebi/",
+   "parts": [
+    {
+     "src": "https://superi.ge/images/detailed/37/optimize_ybzw-zy.webp",
+     "h": 1.0,
+     "x": 0.0
+    },
+    {
+     "src": "https://superi.ge/images/detailed/39/7d823a7a6c1b52c48a121846639a8637e188747c41bbb114c4c9e93cbc753035.png.webp",
+     "h": 0.66,
+     "x": 0.5
+    }
+   ]
+  },
+  {
+   "file": "06-tsvrili-sakopatskhovrebo-teqnika",
+   "label": "წვრილი საყოფაცხოვრებო ტექნიკა",
+   "url": "https://superi.ge/tsvrili-sakopatskhovrebo-teqnika/",
+   "parts": [
+    {
+     "src": "https://superi.ge/images/detailed/21/51Rq-iHShFL._AC_SL1500_.jpg",
+     "h": 1.0,
+     "x": 0.0
+    },
+    {
+     "src": "https://superi.ge/images/detailed/52/product-001-01_wfmj-vs.webp",
+     "h": 0.48,
+     "x": 0.3
+    }
+   ]
+  },
+  {
+   "file": "07-samzareulos-teqnika",
+   "label": "სამზარეულოს ტექნიკა",
+   "url": "https://superi.ge/samzarelos-teqnika/",
+   "parts": [
+    {
+     "src": "https://superi.ge/images/detailed/56/product-001-01_3qvt-qm.webp",
+     "h": 1.0,
+     "x": 0.0
+    },
+    {
+     "src": "https://superi.ge/images/detailed/41/17778272_eCommerce_HC_K15_TWK4P439_BPlus_PowerImage.webp",
+     "h": 0.72,
+     "x": 0.62
+    }
+   ]
+  },
+  {
+   "file": "08-saopise-da-qseluri-motskobilobebi",
+   "label": "საოფისე და ქსელური მოწყობილობები",
+   "url": "https://superi.ge/saopise-da-qseluri-motskobilobebi/",
+   "parts": [
+    {
+     "src": "https://superi.ge/images/detailed/52/product-001-02_td6y-al.webp",
+     "h": 1.0,
+     "x": 0.0
+    },
+    {
+     "src": "https://superi.ge/images/detailed/40/dc35f5a07c8bbed312e83b593c9b3c5cf94c378432786795b53fe0d6d393d6f3.jpg.webp",
+     "h": 0.5,
+     "x": 0.62
+    }
+   ]
+  },
+  {
+   "file": "09-silamaze-da-movla",
+   "label": "სილამაზე და მოვლა",
+   "url": "https://superi.ge/silamaze-da-movla/",
+   "src": "https://superi.ge/images/detailed/58/product-001-01_oy94-yg.webp",
+   "sr": false
+  }
+ ]
+}

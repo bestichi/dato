@@ -16,6 +16,9 @@ banners.json:
               "src": "https://superi.ge/images/detailed/...", "sr": false}]}
   "sr": true runs 2x EDSR super-resolution first (for photos where the product is under ~700px).
   Optional per item: "scale" (<1 shrinks the product), "dy" (vertical offset, px).
+  Several products in one banner: replace "src"/"sr" with "parts", drawn back to front:
+    "parts": [{"src": "...", "sr": false, "h": 1.0, "x": 0.0, "y": 0.0}, ...]
+  h = height, x = horizontal centre, y = bottom above the floor; all in units of the same length.
 
 Downloads, models and masks are cached in $SUPERI_CACHE (default ~/.cache/superi-banners).
 """
@@ -153,6 +156,53 @@ def render(prod, out_path, scale=1.0, dy=0):
     return nw, nh, k
 
 
+def prepare(url, sr, work):
+    """Download (+ optional super-resolution) and segment one photo; returns (photo, mask) paths."""
+    work.mkdir(parents=True, exist_ok=True)
+    src = work / ('src' + (Path(urllib.parse.urlparse(url).path).suffix or '.img'))
+    if not src.exists():
+        fetch(url, src)
+    if sr:
+        up = work / 'sr.png'
+        if not up.exists():
+            print(f'  super-resolution {work.name} ...', flush=True)
+            super_res(src, up)
+        src = up
+    mask = work / 'mask.png'
+    if not mask.exists():
+        print(f'  segmentation {work.name} ...', flush=True)
+        subprocess.run([sys.executable, __file__, '--mask-worker', str(src), str(mask)], check=True)
+    return src, mask
+
+
+def compose_group(parts, unit=1000):
+    """Arrange several cut-outs on one floor; later parts are in front and cast a soft shadow on earlier ones."""
+    import hashlib
+    placed = []
+    for pt in parts:
+        key = hashlib.sha1((pt['src'] + ('#sr' if pt.get('sr') else '')).encode()).hexdigest()[:16]
+        cut = cutout(*prepare(pt['src'], pt.get('sr', False), CACHE / 'work' / '_parts' / key))
+        h = round(pt['h'] * unit)
+        w = round(cut.width * h / cut.height)
+        placed.append((resize_premultiplied(cut, w, h), round(pt.get('x', 0) * unit - w / 2), round(-pt.get('y', 0) * unit - h)))
+    x0 = min(x for _, x, _ in placed) - 60
+    y0 = min(y for _, _, y in placed) - 60
+    x1 = max(x + im.width for im, x, _ in placed) + 60
+    y1 = max(y + im.height for im, _, y in placed) + 60
+    canvas = Image.new('RGBA', (x1 - x0, y1 - y0), (0, 0, 0, 0))
+    for i, (im, x, y) in enumerate(placed):
+        if i:
+            sh = Image.new('RGBA', canvas.size, (40, 30, 70, 0))
+            a = Image.new('L', canvas.size, 0)
+            a.paste(im.split()[3].point(lambda v: int(v * 0.22)), (x - x0 - 6, y - y0 + 8))
+            sh.putalpha(a.filter(ImageFilter.GaussianBlur(14)))
+            canvas.alpha_composite(sh)
+        canvas.alpha_composite(im, (x - x0, y - y0))
+    al = np.asarray(canvas.split()[3])
+    ys, xs = np.where(al > 20)
+    return canvas.crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
+
+
 def main():
     if len(sys.argv) == 4 and sys.argv[1] == '--mask-worker':
         return mask_worker(sys.argv[2], sys.argv[3])
@@ -167,22 +217,11 @@ def main():
         name = it['file']
         if args.only and not any(o in name for o in args.only):
             continue
-        work = CACHE / 'work' / out_dir.name / name
-        work.mkdir(parents=True, exist_ok=True)
-        src = work / ('src' + (Path(urllib.parse.urlparse(it['src']).path).suffix or '.img'))
-        if not src.exists():
-            fetch(it['src'], src)
-        if it.get('sr'):
-            up = work / 'sr.png'
-            if not up.exists():
-                print(f'{name}: super-resolution ...', flush=True)
-                super_res(src, up)
-            src = up
-        mask = work / 'mask.png'
-        if not mask.exists():
-            print(f'{name}: segmentation ...', flush=True)
-            subprocess.run([sys.executable, __file__, '--mask-worker', str(src), str(mask)], check=True)
-        nw, nh, k = render(cutout(src, mask), out_dir / f'{name}.png', it.get('scale', 1.0), it.get('dy', 0))
+        if 'parts' in it:
+            prod = compose_group(it['parts'])
+        else:
+            prod = cutout(*prepare(it['src'], it.get('sr', False), CACHE / 'work' / out_dir.name / name))
+        nw, nh, k = render(prod, out_dir / f'{name}.png', it.get('scale', 1.0), it.get('dy', 0))
         print(f'{name}.png  product {nw}x{nh}px  source x{k:.2f}' + ('  (upscaled, consider "sr": true)' if k > 1.05 else ''),
               flush=True)
 
