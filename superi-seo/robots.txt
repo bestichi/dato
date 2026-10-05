@@ -1,0 +1,25 @@
+User-agent: *
+# დახარისხება, ფილტრები, ძიება — noindex-ია, მაგრამ Google-ს crawl-ს ხარჯავს
+Disallow: /*?*sort_by=
+Disallow: /*?*sort_order=
+Disallow: /*?*items_per_page=
+Disallow: /*?*features_hash=
+Disallow: /*dispatch=products.search
+Disallow: /*dispatch=tags.view
+Disallow: /*dispatch=call_requests
+Disallow: /*dispatch=auth.
+Disallow: /*dispatch=_no_page
+Disallow: /*?*return_url=
+Disallow: /*?*phone_country=
+Disallow: /*?*action=preview
+
+# სერვისული გვერდები (კალათა, ავტორიზაცია, პროფილი, შეკვეთები, სურვილები)
+Disallow: /checkout-cart/
+Disallow: /checkout-checkout/
+Disallow: /auth-loginform/
+Disallow: /orders-search/
+Disallow: /profiles-add-ka/
+Disallow: /profiles-update-ka/
+Disallow: /wishlist-view/
+
+Sitemap: https://superi.ge/sitemap.xml
