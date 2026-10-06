@@ -1,0 +1,97 @@
+-- ============================================================================
+-- superi.ge — 24: კატეგორიის ტექსტები (პირველი 8, Search Console-ის მიხედვით)
+-- 7 კატეგორიას ერთხაზიანი სლოგანის ნაცვლად სრული ტექსტი ეწერება (მხოლოდ თუ ტექსტი 300 სიმბოლოზე მოკლეა),
+-- გაზის გამათბობლებს ემატება ბლოკი „ფართობის მიხედვით“ (თუ უკვე არ არის).
+-- ძველი ტექსტები ინახება superi_bk_cat_24-ში. ხელახლა გაშვება უსაფრთხოა.
+-- ============================================================================
+SET NAMES utf8mb4;
+CREATE TABLE IF NOT EXISTS superi_bk_cat_24 AS SELECT cd.category_id, cd.lang_code, s.name AS slug, cd.description FROM cscart_category_descriptions cd JOIN cscart_seo_names s ON s.object_id = cd.category_id AND s.type = 'c' AND s.lang_code = cd.lang_code AND s.company_id = 1 WHERE cd.lang_code = 'ka' AND s.name IN ('eleqtro-gamatboblebi', 'akumulatorebi', 'aerogrilebi', 'mobiluri-teleponebi', 'televizorebi', 'macivrebi', 'hoverbordebi', 'gazis-gamatboblebi');
+UPDATE cscart_category_descriptions cd JOIN cscart_seo_names s ON s.object_id = cd.category_id AND s.type = 'c' AND s.lang_code = 'ka' AND s.company_id = 1 AND s.name = 'eleqtro-gamatboblebi' SET cd.description = '<p>ელექტრო გამათბობელი ოთახის გათბობის ყველაზე მარტივი გზაა: მონტაჟი არ სჭირდება, ჟანგბადს არ წვავს და წვის პროდუქტებს არ გამოყოფს — უბრალოდ ჩართავთ როზეტში. Superi.ge-ზე იპოვით ზეთის რადიატორებს, კონვექტორებს, ფენ-ჰიტერებსა და ინფრაწითელ გამათბობლებს <a href="https://superi.ge/midea/">Midea</a>-ს, <a href="https://superi.ge/beko/">Beko</a>-ს, <a href="https://superi.ge/gorenje/">Gorenje</a>-ს, <a href="https://superi.ge/sencor/">Sencor</a>-ის, <a href="https://superi.ge/zilan/">Zilan</a>-ის, <a href="https://superi.ge/kumtel/">Kumtel</a>-ისა და <a href="https://superi.ge/ardesto/">Ardesto</a>-ს ბრენდებისგან.</p>
+<h2>რომელი ტიპი ავირჩიოთ</h2>
+<ul>
+<li><strong>ზეთის რადიატორი:</strong> ჩუმი და თანაბარი სითბო, გამორთვის შემდეგაც დიდხანს ათბობს — კარგია საძინებლისა და საბავშვოსთვის.</li>
+<li><strong>კონვექტორი:</strong> ოთახს სწრაფად და თანაბრად ათბობს, მსუბუქია და ხშირად კედელზეც მაგრდება — კარგია მისაღებისთვის.</li>
+<li><strong>ფენ-ჰიტერი (თბოვენტილატორი):</strong> სითბოს თითქმის მაშინვე იგრძნობთ — კარგია მცირე ოთახის სწრაფი გათბობისთვის.</li>
+<li><strong>ინფრაწითელი გამათბობელი:</strong> ათბობს მის წინ მყოფ ადამიანებსა და საგნებს — გამოდგება ლოკალური გათბობისთვის: მაგიდასთან, აივანზე ან სახელოსნოში.</li>
+</ul>
+<h2>რას მივაქციოთ ყურადღება</h2>
+<ul>
+<li><strong>სიმძლავრე:</strong> საორიენტაციოდ 1 მ²-ზე დაახლოებით 100 W სიმძლავრეა საჭირო — 2000 W-იანი მოდელი დაახლოებით 20 მ² ოთახს ათბობს.</li>
+<li><strong>თერმოსტატი:</strong> ინარჩუნებს სასურველ ტემპერატურას და ზოგავს დენს.</li>
+<li><strong>უსაფრთხოება:</strong> გადახურებისგან დაცვა და გადაბრუნებისას ავტომატური გათიშვა — განსაკუთრებით მნიშვნელოვანია, თუ სახლში ბავშვები ან შინაური ცხოველები არიან.</li>
+<li><strong>დამატებითი ფუნქციები:</strong> ტაიმერი, პულტი, ECO რეჟიმი და Wi-Fi მართვა გამოყენებას უფრო მოსახერხებელს ხდის.</li>
+</ul>
+<p>დეტალური რჩევებისთვის წაიკითხეთ ჩვენი გზამკვლევი: <a href="https://superi.ge/rogor-shevarchiot-eleqtro-gamatbobeli/">როგორ შევარჩიოთ ელექტრო გამათბობელი</a>. შეძენა Superi.ge-ზე შეგიძლიათ ნაწილ-ნაწილ გადახდით; თბილისში მიწოდება უფასოა 100₾-დან, ასევე ვაწვდით მთელ საქართველოში. იხილეთ ასევე <a href="https://superi.ge/gazis-gamatboblebi/">გაზის გამათბობლები</a> და <a href="https://superi.ge/kondicionerebi/">კონდიციონერები</a>.</p>' WHERE cd.lang_code = 'ka' AND CHAR_LENGTH(REGEXP_REPLACE(IFNULL(cd.description, ''), '<[^>]*>', '')) < 300;
+UPDATE cscart_category_descriptions cd JOIN cscart_seo_names s ON s.object_id = cd.category_id AND s.type = 'c' AND s.lang_code = 'ka' AND s.company_id = 1 AND s.name = 'akumulatorebi' SET cd.description = '<p>მანქანის აკუმულატორზეა დამოკიდებული ძრავის საიმედო ჩართვა, განსაკუთრებით ზამთარში, როცა ყინვაში აკუმულატორის ეფექტურობა იკლებს. Superi.ge-ზე იპოვით მსუბუქი ავტომობილების, სატვირთოებისა და მოტოციკლების აკუმულატორებს <a href="https://superi.ge/varta/">VARTA</a>-ს, <a href="https://superi.ge/energizer/">Energizer</a>-ის, <a href="https://superi.ge/exide/">Exide</a>-ისა და <a href="https://superi.ge/autopower/">Autopower</a>-ის ბრენდებისგან — 12-დან 225 ამპერ-საათამდე, ასევე აკუმულატორის დამტენებს.</p>
+<h2>როგორ შევარჩიოთ მანქანის აკუმულატორი</h2>
+<ul>
+<li><strong>ტევადობა (Ah):</strong> აირჩიეთ ავტომობილის მწარმოებლის მიერ რეკომენდებული ტევადობა — ის მითითებულია ტექნიკურ დოკუმენტაციაში ან ძველ აკუმულატორზე.</li>
+<li><strong>ცივი გაშვების დენი (CCA):</strong> რაც მაღალია, მით უკეთ იქოქება ძრავა ცივ ამინდში.</li>
+<li><strong>ზომა და კლემების მდებარეობა:</strong> აკუმულატორი ბუდეში უნდა ჩაჯდეს, „+“ და „−“ კლემები კი სწორ მხარეს უნდა იყოს. იაპონური და კორეული ავტომობილებისთვის ხშირად JIS სტანდარტის აკუმულატორია საჭირო.</li>
+<li><strong>ტექნოლოგია:</strong> Start-Stop სისტემის მქონე ავტომობილებს EFB ან AGM აკუმულატორი სჭირდება (მაგ. VARTA EFB ან VARTA Silver AGM).</li>
+<li><strong>სატვირთო და სპეცტექნიკა:</strong> დიდი ტევადობის (180–225 Ah) აკუმულატორები გათვლილია სატვირთოებისა და სპეცტექნიკისთვის.</li>
+</ul>
+<p>შეძენა Superi.ge-ზე შეგიძლიათ ნაწილ-ნაწილ გადახდით; თბილისში მიწოდება უფასოა 100₾-დან, ასევე ვაწვდით მთელ საქართველოში. იხილეთ ასევე <a href="https://superi.ge/avtosamkaro/">ავტოსამყარო</a>, <a href="https://superi.ge/saburavebi/">საბურავები</a> და <a href="https://superi.ge/kompresorebi/">კომპრესორები</a>.</p>' WHERE cd.lang_code = 'ka' AND CHAR_LENGTH(REGEXP_REPLACE(IFNULL(cd.description, ''), '<[^>]*>', '')) < 300;
+UPDATE cscart_category_descriptions cd JOIN cscart_seo_names s ON s.object_id = cd.category_id AND s.type = 'c' AND s.lang_code = 'ka' AND s.company_id = 1 AND s.name = 'aerogrilebi' SET cd.description = '<p>აეროგრილი (Air Fryer) საკვებს ცხელი ჰაერის სწრაფი ცირკულაციით ამზადებს — ხრაშუნა კარტოფილს, ხორცს, ბოსტნეულს და ცომეულს იღებთ ზეთის გარეშე ან სულ მცირე რაოდენობით. Superi.ge-ზე იპოვით <a href="https://superi.ge/ninja/">Ninja</a>-ს, <a href="https://superi.ge/philips/">Philips</a>-ის, <a href="https://superi.ge/tefal/">Tefal</a>-ის, <a href="https://superi.ge/bosch/">Bosch</a>-ის, <a href="https://superi.ge/gorenje/">Gorenje</a>-ს, <a href="https://superi.ge/midea/">Midea</a>-ს, <a href="https://superi.ge/beko/">Beko</a>-სა და სხვა ბრენდების აეროგრილებს — კომპაქტური მოდელებიდან დიდ, ორკალათიან აეროგრილებამდე.</p>
+<h2>როგორ შევარჩიოთ აეროგრილი</h2>
+<ul>
+<li><strong>მოცულობა:</strong> 1–2 ადამიანისთვის საკმარისია 3–4.5 ლიტრი, 3–4 კაციანი ოჯახისთვის — 5–7 ლიტრი, დიდი ოჯახისა და მთლიანი ქათმისთვის — 8 ლიტრი და მეტი.</li>
+<li><strong>ერთი თუ ორი კალათა:</strong> ორკალათიანი მოდელით (მაგ. Ninja AF300EU, AF400EU) ორ კერძს ერთდროულად, სხვადასხვა რეჟიმში ამზადებთ.</li>
+<li><strong>სიმძლავრე:</strong> აეროგრილების უმეტესობა 1300–2700 W-იანია; მეტი სიმძლავრე უფრო სწრაფ მომზადებას ნიშნავს.</li>
+<li><strong>მართვა და პროგრამები:</strong> ციფრული პანელი მზა პროგრამებით (კარტოფილი, ქათამი, თევზი, ცომეული) მომზადებას ამარტივებს, მექანიკური მართვა კი მარტივი და საიმედოა.</li>
+<li><strong>მოვლა:</strong> არაწებოვანი, ჭურჭლის სარეცხ მანქანაში გასარეცხი კალათა დროს დაგიზოგავთ.</li>
+</ul>
+<p>შეძენა Superi.ge-ზე შეგიძლიათ ნაწილ-ნაწილ გადახდით; თბილისში მიწოდება უფასოა 100₾-დან, ასევე ვაწვდით მთელ საქართველოში. იხილეთ ასევე <a href="https://superi.ge/mikrotalghuri-ghumelebi/">მიკროტალღური ღუმელები</a>, <a href="https://superi.ge/eleqtro-gumelebi/">ელექტრო ღუმელები</a> და <a href="https://superi.ge/samzareulos-kombainebi/">სამზარეულოს კომბაინები</a>.</p>' WHERE cd.lang_code = 'ka' AND CHAR_LENGTH(REGEXP_REPLACE(IFNULL(cd.description, ''), '<[^>]*>', '')) < 300;
+UPDATE cscart_category_descriptions cd JOIN cscart_seo_names s ON s.object_id = cd.category_id AND s.type = 'c' AND s.lang_code = 'ka' AND s.company_id = 1 AND s.name = 'mobiluri-teleponebi' SET cd.description = '<p>Superi.ge-ზე იპოვით 300-ზე მეტ სმარტფონს წამყვანი ბრენდებისგან — <a href="https://superi.ge/samsung/">Samsung</a>, <a href="https://superi.ge/apple/">Apple iPhone</a>, <a href="https://superi.ge/xiaomi/">Xiaomi</a> (Redmi, Poco), <a href="https://superi.ge/honor/">Honor</a>, <a href="https://superi.ge/motorola/">Motorola</a>, <a href="https://superi.ge/nokia/">Nokia</a>, <a href="https://superi.ge/oukitel/">Oukitel</a>, <a href="https://superi.ge/tecno/">Tecno</a> და სხვა: ბიუჯეტური მოდელებიდან ფლაგმანებამდე.</p>
+<h2>როგორ შევარჩიოთ სმარტფონი</h2>
+<ul>
+<li><strong>მეხსიერება:</strong> ოპერატიული მეხსიერება (RAM) სისწრაფეზე მოქმედებს — ყოველდღიური გამოყენებისთვის 6–8 GB საკმარისია. შიდა მეხსიერება ფოტოებს, ვიდეოებსა და აპლიკაციებს იტევს — რეკომენდებულია 128 GB ან მეტი.</li>
+<li><strong>ეკრანი:</strong> AMOLED ეკრანი უფრო კონტრასტული და ენერგოეფექტურია, 90–120 ჰც სიხშირე კი სურათს უფრო გლუვს ხდის.</li>
+<li><strong>კამერა:</strong> მეგაპიქსელებზე მეტად მნიშვნელოვანია სენსორი და ოპტიკური სტაბილიზაცია (OIS), განსაკუთრებით ღამის ფოტოებისთვის.</li>
+<li><strong>ბატარეა და დამუხტვა:</strong> 5000 mAh-იანი ბატარეა ჩვეულებრივ მთელ დღეს ძლებს, სწრაფი დამუხტვა კი დროს ზოგავს.</li>
+<li><strong>NFC და 5G:</strong> NFC საჭიროა ტელეფონით უკონტაქტო გადახდისთვის, 5G კი უფრო სწრაფ მობილურ ინტერნეტს გაძლევთ.</li>
+<li><strong>გამძლე მოდელები:</strong> თუ ტელეფონს რთულ პირობებში იყენებთ, აირჩიეთ IP68 დაცვის მქონე დაცული სმარტფონი.</li>
+</ul>
+<p>შეძენა Superi.ge-ზე შეგიძლიათ ნაწილ-ნაწილ გადახდით; თბილისში მიწოდება უფასოა 100₾-დან, ასევე ვაწვდით მთელ საქართველოში. იხილეთ ასევე <a href="https://superi.ge/mobiluri-aqsesuarebi/">მობილურის აქსესუარები</a>, <a href="https://superi.ge/smart-watches/">სმარტ საათები</a>, <a href="https://superi.ge/yursasmenebi/">ყურსასმენები</a> და <a href="https://superi.ge/tabletebi/">ტაბლეტები</a>.</p>' WHERE cd.lang_code = 'ka' AND CHAR_LENGTH(REGEXP_REPLACE(IFNULL(cd.description, ''), '<[^>]*>', '')) < 300;
+UPDATE cscart_category_descriptions cd JOIN cscart_seo_names s ON s.object_id = cd.category_id AND s.type = 'c' AND s.lang_code = 'ka' AND s.company_id = 1 AND s.name = 'televizorebi' SET cd.description = '<p>Superi.ge-ზე იპოვით 250-ზე მეტ ტელევიზორს <a href="https://superi.ge/samsung/">Samsung</a>-ის, <a href="https://superi.ge/lg/">LG</a>-ის, <a href="https://superi.ge/tcl/">TCL</a>-ის, <a href="https://superi.ge/sony/">Sony</a>-ს, <a href="https://superi.ge/blaupunkt/">Blaupunkt</a>-ის, <a href="https://superi.ge/xiaomi/">Xiaomi</a>-ს, <a href="https://superi.ge/philips/">Philips</a>-ის, <a href="https://superi.ge/panasonic/">Panasonic</a>-ისა და სხვა ბრენდებისგან — 32 დიუმიანი მოდელებიდან 100 დიუმიან ეკრანებამდე: LED, QLED, QNED, Mini LED და OLED.</p>
+<h2>როგორ შევარჩიოთ ტელევიზორი</h2>
+<ul>
+<li><strong>ზომა:</strong> 4K ტელევიზორისთვის ეკრანამდე კომფორტული მანძილი დაახლოებით დიაგონალის 1.2–1.5-ჯერადია: 2 მეტრიდან კარგია 55 დიუმი (140 სმ), 2.5 მეტრიდან — 65 დიუმი (165 სმ).</li>
+<li><strong>გარჩევადობა:</strong> 43 დიუმიდან და მეტზე აირჩიეთ 4K (UHD); 32 დიუმიან ტელევიზორს HD ან Full HD საკმარისია.</li>
+<li><strong>მატრიცის ტიპი:</strong> LED ხელმისაწვდომია; QLED და QNED უფრო მკვეთრ ფერებსა და სიკაშკაშეს იძლევა; Mini LED მაღალი კონტრასტისაა; OLED კი იდეალურ შავ ფერს და საუკეთესო სურათს გაძლევთ ბნელ ოთახში. დეტალურად: <a href="https://superi.ge/oled-vs-qled-vs-miniled-2026/">OLED, QLED თუ Mini LED — რომელი ავირჩიოთ</a>.</li>
+<li><strong>Smart TV:</strong> Google TV / Android TV, Tizen (Samsung) და webOS (LG) — YouTube, Netflix და სხვა აპლიკაციები პირდაპირ ტელევიზორში.</li>
+<li><strong>სიხშირე:</strong> 100–144 ჰც სპორტისა და თამაშებისთვის უფრო გლუვ სურათს იძლევა.</li>
+</ul>
+<p>შეძენა Superi.ge-ზე შეგიძლიათ ნაწილ-ნაწილ გადახდით; თბილისში მიწოდება უფასოა 100₾-დან, ასევე ვაწვდით მთელ საქართველოში. იხილეთ ასევე <a href="https://superi.ge/televizoris-aqsesuarebi/">ტელევიზორის აქსესუარები</a>, <a href="https://superi.ge/proeqtori/">პროექტორები</a> და <a href="https://superi.ge/konsolebi-da-aqsesuarebi/">სათამაშო კონსოლები</a>.</p>' WHERE cd.lang_code = 'ka' AND CHAR_LENGTH(REGEXP_REPLACE(IFNULL(cd.description, ''), '<[^>]*>', '')) < 300;
+UPDATE cscart_category_descriptions cd JOIN cscart_seo_names s ON s.object_id = cd.category_id AND s.type = 'c' AND s.lang_code = 'ka' AND s.company_id = 1 AND s.name = 'macivrebi' SET cd.description = '<p>Superi.ge-ზე იპოვით 350-ზე მეტ მაცივარს <a href="https://superi.ge/bosch/">Bosch</a>-ის, <a href="https://superi.ge/beko/">Beko</a>-ს, <a href="https://superi.ge/samsung/">Samsung</a>-ის, <a href="https://superi.ge/lg/">LG</a>-ის, <a href="https://superi.ge/midea/">Midea</a>-ს, <a href="https://superi.ge/haier/">Haier</a>-ის, <a href="https://superi.ge/gorenje/">Gorenje</a>-ს, <a href="https://superi.ge/hisense/">Hisense</a>-ისა და სხვა ბრენდებისგან — ორკამერიანი, Side-by-Side, მრავალკარიანი, ჩასაშენებელი და მინი მაცივრები.</p>
+<h2>როგორ შევარჩიოთ მაცივარი</h2>
+<ul>
+<li><strong>ტიპი:</strong> ორკამერიანი მაცივარი ქვედა საყინულით ყველაზე გავრცელებულია; Side-by-Side და მრავალკარიანი მოდელები დიდი ოჯახისთვისაა, ერთკამერიანი და მინი მაცივრები — აგარაკისა და ოფისისთვის. ჩასაშენებელი მოდელი სამზარეულოს კარადაში მონტაჟდება.</li>
+<li><strong>მოცულობა:</strong> 1–2 ადამიანისთვის საკმარისია 200–250 ლიტრი, 3–4 კაციანი ოჯახისთვის — 300–350 ლიტრი, დიდი ოჯახისთვის — 400 ლიტრი და მეტი.</li>
+<li><strong>No Frost:</strong> საყინულეში ყინული არ გროვდება და მაცივრის გალღობა საჭირო არ არის.</li>
+<li><strong>ინვერტორული კომპრესორი:</strong> უფრო ჩუმად მუშაობს, ნაკლებ დენს ხარჯავს და დიდხანს ძლებს.</li>
+<li><strong>ზომები:</strong> ყიდვამდე გაზომეთ ადგილი — სიმაღლე, სიგანე და კარის გასაღებად საჭირო სივრცე.</li>
+<li><strong>ენერგოეფექტურობა:</strong> მაღალი ენერგოკლასი წლების განმავლობაში დენის ხარჯს ამცირებს.</li>
+</ul>
+<p>შეძენა Superi.ge-ზე შეგიძლიათ ნაწილ-ნაწილ გადახდით; თბილისში მიწოდება უფასოა 100₾-დან, ასევე ვაწვდით მთელ საქართველოში. იხილეთ ასევე <a href="https://superi.ge/sakinule/">საყინულეები</a>, <a href="https://superi.ge/saretskhi-manqanebi/">სარეცხი მანქანები</a> და <a href="https://superi.ge/churchelis-sarecxhi-manqanebi/">ჭურჭლის სარეცხი მანქანები</a>.</p>' WHERE cd.lang_code = 'ka' AND CHAR_LENGTH(REGEXP_REPLACE(IFNULL(cd.description, ''), '<[^>]*>', '')) < 300;
+UPDATE cscart_category_descriptions cd JOIN cscart_seo_names s ON s.object_id = cd.category_id AND s.type = 'c' AND s.lang_code = 'ka' AND s.company_id = 1 AND s.name = 'hoverbordebi' SET cd.description = '<p>ჰოვერბორდი (გიროსკუტერი) ორბორბლიანი, თვითბალანსირებადი ელექტრო დაფაა, რომელსაც სხეულის მცირედი დახრით მართავთ. ის ბავშვებისა და მოზარდების ერთ-ერთი საყვარელი გასართობია. Superi.ge-ზე იპოვით ჰოვერბორდებს 6.5, 8 და 10 დიუმიანი ბორბლებით, სხვადასხვა ფერში — Bluetooth დინამიკით და LED განათებით.</p>
+<h2>როგორ შევარჩიოთ ჰოვერბორდი</h2>
+<ul>
+<li><strong>ბორბლის ზომა:</strong> 6.5 დიუმიანი ჰოვერბორდი მსუბუქი და კომპაქტურია — კარგია პატარა ბავშვებისთვის და გლუვი ზედაპირისთვის; 8 დიუმიანი უფრო სტაბილურია; 10 დიუმიანი კი უკეთ გადის უსწორმასწორო გზას.</li>
+<li><strong>მაქსიმალური დატვირთვა:</strong> ყურადღება მიაქციეთ მწარმოებლის მიერ მითითებულ მაქსიმალურ წონას.</li>
+<li><strong>დამატებითი ფუნქციები:</strong> Bluetooth დინამიკი, LED განათება და ტარების რეჟიმები ჰოვერბორდს უფრო სახალისოს ხდის.</li>
+<li><strong>უსაფრთხოება:</strong> ტარებისას გამოიყენეთ ჩაფხუტი და მუხლისა და იდაყვის დამცავები, ბატარეა კი დატენეთ მხოლოდ ორიგინალი დამტენით.</li>
+</ul>
+<p>შეძენა Superi.ge-ზე შეგიძლიათ ნაწილ-ნაწილ გადახდით; თბილისში მიწოდება უფასოა 100₾-დან, ასევე ვაწვდით მთელ საქართველოში. იხილეთ ასევე <a href="https://superi.ge/skuterebi/">სკუტერები</a>, <a href="https://superi.ge/velosipedebi/">ველოსიპედები</a> და <a href="https://superi.ge/eleqtro-manqanebi/">საბავშვო ელექტრო მანქანები</a>.</p>' WHERE cd.lang_code = 'ka' AND CHAR_LENGTH(REGEXP_REPLACE(IFNULL(cd.description, ''), '<[^>]*>', '')) < 300;
+UPDATE cscart_category_descriptions cd JOIN cscart_seo_names s ON s.object_id = cd.category_id AND s.type = 'c' AND s.lang_code = 'ka' AND s.company_id = 1 AND s.name = 'gazis-gamatboblebi' SET cd.description = REPLACE(cd.description, 'Gilan-ის, Fujiyama-ს, Hosseven-ის, Ersel-ისა და AKOG-ის გამათბობლებს 40-დან 120 მ²-მდე ფართისთვის', 'Gilan-ის, Fujiyama-ს, Hosseven-ის, Ersel-ის, AKOG-ის, Karma-სა და Tam-Kera-ს გამათბობლებს 20-დან 120 მ²-მდე ფართისთვის') WHERE cd.lang_code = 'ka';
+UPDATE cscart_category_descriptions cd JOIN cscart_seo_names s ON s.object_id = cd.category_id AND s.type = 'c' AND s.lang_code = 'ka' AND s.company_id = 1 AND s.name = 'gazis-gamatboblebi' SET cd.description = CONCAT(IFNULL(cd.description, ''), '\n', '<h2>გაზის გამათბობელი ფართობის მიხედვით</h2>
+<ul>
+<li><strong>30 მ²-მდე:</strong> <a href="https://superi.ge/akog-2h-20-graphite/">AKOG 2H (20 მ²)</a>, <a href="https://superi.ge/akog-2-sp-25-beige/">AKOG 2 SP (25 მ²)</a>, <a href="https://superi.ge/karma-beta-3-mechanic-30/">Karma BETA 3 (30 მ²)</a>.</li>
+<li><strong>35–50 მ²:</strong> <a href="https://superi.ge/akog-3-sp-35-graphite/">AKOG 3 SP (35 მ²)</a>, <a href="https://superi.ge/fujiyama-fhs-4000-k-40-black/">Fujiyama FHS 4000 K (40 მ²)</a>, <a href="https://superi.ge/karma-beta-4-mechanic-40/">Karma BETA 4 (40 მ²)</a>, <a href="https://superi.ge/akog-4-sp-45-graphit/">AKOG 4 SP (45 მ²)</a>, <a href="https://superi.ge/hosseven-hdu-5-50-black/">Hosseven HDU-5 (50 მ²)</a>.</li>
+<li><strong>60 მ²:</strong> <a href="https://superi.ge/akog-5-sp-60-graphit/">AKOG 5 SP</a>, <a href="https://superi.ge/karma-beta-5-mechanic-60/">Karma BETA 5</a>, <a href="https://superi.ge/gilan-gds-321-c-60-black-glass/">Gilan GDS-321-C</a>, <a href="https://superi.ge/ersel-ehs-4000-ks-40-60-black/">Ersel EHS 4000 KS (40–60 მ²)</a>.</li>
+<li><strong>70–80 მ²:</strong> <a href="https://superi.ge/fujiyama-fhs-9000-mfc-70-white/">Fujiyama FHS 9000 MFC (70 მ²)</a>, <a href="https://superi.ge/fujiyama-9000kfc-black-80/">Fujiyama 9000KFC (80 მ²)</a>, <a href="https://superi.ge/hosseven-hdu-8-beige/">Hosseven HDU-8 (80 მ²)</a>, <a href="https://superi.ge/ersel-ehs-5000-ks-60-80-black/">Ersel EHS 5000 KS (60–80 მ²)</a>, <a href="https://superi.ge/tam-kera-ag-12-7080/">Tam-Kera AG-12 (70–80 მ²)</a>.</li>
+<li><strong>100–120 მ²:</strong> <a href="https://superi.ge/fujiyama-14000-ef-100/">Fujiyama 14000 EF (100 მ²)</a>, <a href="https://superi.ge/hosseven-hdu-10-100-black/">Hosseven HDU-10 (100 მ²)</a>, <a href="https://superi.ge/tam-kera-ag14/">Tam-Kera AG14 (80–100 მ²)</a>, <a href="https://superi.ge/akog-100-sp-110/">AKOG 100 SP (110 მ²)</a>, <a href="https://superi.ge/gilan-gds-301-120-black/">Gilan GDS-301 (120 მ²)</a>, <a href="https://superi.ge/fujiyama-12000kfc-black-120/">Fujiyama 12000KFC (120 მ²)</a>.</li>
+</ul>
+<p>უსაფრთხოებისთვის გაზის გამათბობელთან ერთად გამოიყენეთ <a href="https://superi.ge/bunebrivi-da-mkhutavi-airis-deteqtori-3314725/">ბუნებრივი და მხუთავი აირის დეტექტორი</a>. დეტალური რჩევები: <a href="https://superi.ge/rogor-shevarchiot-gazis-gamatbobeli/">როგორ შევარჩიოთ გაზის გამათბობელი</a>.</p>') WHERE cd.lang_code = 'ka' AND IFNULL(cd.description, '') NOT LIKE '%ფართობის მიხედვით%';
+SELECT s.name AS slug, CHAR_LENGTH(REGEXP_REPLACE(IFNULL(cd.description, ''), '<[^>]*>', '')) AS text_chars FROM cscart_category_descriptions cd JOIN cscart_seo_names s ON s.object_id = cd.category_id AND s.type = 'c' AND s.lang_code = 'ka' AND s.company_id = 1 WHERE cd.lang_code = 'ka' AND s.name IN ('eleqtro-gamatboblebi', 'akumulatorebi', 'aerogrilebi', 'mobiluri-teleponebi', 'televizorebi', 'macivrebi', 'hoverbordebi', 'gazis-gamatboblebi') ORDER BY s.name;
+-- დაბრუნება: UPDATE cscart_category_descriptions cd JOIN superi_bk_cat_24 b ON b.category_id = cd.category_id AND b.lang_code = cd.lang_code SET cd.description = b.description;
