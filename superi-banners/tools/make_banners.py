@@ -15,7 +15,8 @@ banners.json:
    "items": [{"file": "01-name", "label": "...", "url": "https://superi.ge/<sub>/",
               "src": "https://superi.ge/images/detailed/...", "sr": false}]}
   "sr": true runs 2x EDSR super-resolution first (for photos where the product is under ~700px).
-  Optional per item: "scale" (<1 shrinks the product), "dy" (vertical offset, px).
+  Optional per item: "scale" (<1 shrinks the product), "dy" (vertical offset, px),
+  "solid": true (fill the whole outline, for products whose body is nearly the background colour).
   Several products in one banner: replace "src"/"sr" with "parts", drawn back to front:
     "parts": [{"src": "...", "sr": false, "h": 1.0, "x": 0.0, "y": 0.0}, ...]
   h = height, x = horizontal centre, y = bottom above the floor; all in units of the same length.
@@ -102,10 +103,25 @@ def mask_worker(src, dst):
     m.crop((ox, oy, ox + im.width, oy + im.height)).save(dst)
 
 
-def cutout(src, mask_path):
+def solid_fill(rgb, a):
+    """Fill the product's outline completely: convex hull of the mask plus every pixel that is not background-white.
+    For appliances whose body is nearly the colour of the photo background (cream hob, white panels)."""
+    import cv2
+    pts = np.argwhere((a > 0.5) | (np.abs(rgb - 255.0).sum(axis=2) > 24))[:, ::-1].astype(np.int32)
+    ss = 4
+    hull = cv2.convexHull(pts * ss + ss // 2)
+    big = np.zeros((a.shape[0] * ss, a.shape[1] * ss), np.uint8)
+    cv2.fillConvexPoly(big, hull, 255, lineType=cv2.LINE_AA)
+    filled = np.asarray(Image.fromarray(big).resize((a.shape[1], a.shape[0]), Image.Resampling.LANCZOS), dtype=np.float32) / 255.0
+    return np.maximum(a, filled)
+
+
+def cutout(src, mask_path, solid=False):
     rgb = np.asarray(load_rgb(src), dtype=np.float32)
     a = np.asarray(Image.open(mask_path), dtype=np.float32) / 255.0
     a = np.clip((a - 0.04) / 0.92, 0, 1)                      # drop faint haze, keep soft edges
+    if solid:
+        a = solid_fill(rgb, a)
     am = np.maximum(a, 1e-3)[..., None]
     fg = (rgb - (1 - am) * 255.0) / am                         # remove the white background from edge pixels
     fg = np.where(a[..., None] > 0.02, np.clip(fg, 0, 255), rgb)
@@ -220,7 +236,7 @@ def main():
         if 'parts' in it:
             prod = compose_group(it['parts'])
         else:
-            prod = cutout(*prepare(it['src'], it.get('sr', False), CACHE / 'work' / out_dir.name / name))
+            prod = cutout(*prepare(it['src'], it.get('sr', False), CACHE / 'work' / out_dir.name / name), it.get('solid', False))
         nw, nh, k = render(prod, out_dir / f'{name}.png', it.get('scale', 1.0), it.get('dy', 0))
         print(f'{name}.png  product {nw}x{nh}px  source x{k:.2f}' + ('  (upscaled, consider "sr": true)' if k > 1.05 else ''),
               flush=True)

@@ -15,7 +15,7 @@
 | `05-quris-zedapiri.png` | [ქურის ზედაპირი](https://superi.ge/quris-zedapiri/) | Gorenje GW6D42CLI (კრემისფერი) |
 | `06-chasashenebeli-ghumelebi.png` | [ჩასაშენებელი ღუმელები](https://superi.ge/chasashenebeli-ghumelebi/) | Beko RBIM 19200 (შავი, ოქროსფერი სახელურებით) |
 | `07-chasashenebeli-saretskhi-manqanebi.png` | [ჩასაშენებელი სარეცხი მანქანები](https://superi.ge/chasashenebeli-saretskhi-manqanebi/) | Electrolux EWN7F447WI |
-| `08-dispenserebi.png` | [დისპენსერები](https://superi.ge/dispenserebi/) | Midea MK-23E |
+| `08-dispenserebi.png` | [დისპენსერები](https://superi.ge/dispenserebi/) | Dixi BY601 (შავი, დამალული ავზით) |
 | `09-gamtsovi.png` | [გამწოვი](https://superi.ge/gamtsovi/) | Beko CWB 6410 CR (კრემისფერი) |
 | `10-sashrobebi.png` | [საშრობი მანქანები](https://superi.ge/sashrobebi/) | AEG TR838P4JE |
 | `11-gazqurebi.png` | [გაზქურები](https://superi.ge/gazqurebi/) | Alneo ALN6080B Cream |
