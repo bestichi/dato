@@ -1,0 +1,20 @@
+{
+ "margin": 48,
+ "gutter": 24,
+ "baseline": 268,
+ "box": [124, 116],
+ "cap_y": 281,
+ "cap_size": 16,
+ "cap_weight": 500,
+ "logo": {"x": 48, "y": 106, "xh": 18, "glyph": 0.56, "glyph_dx": 0.015},
+ "products": [
+  {"src": "phone.png",         "col": 1, "label": "მობილური", "scale": 0.74},
+  {"src": "mini5.png",         "col": 2, "label": "დრონები"},
+  {"src": "fridge_clean.png",  "col": 3, "label": "ტექნიკა"},
+  {"src": "switch_clean2.png", "col": 4, "label": "გეიმინგი"},
+  {"src": "hairdryer.png",     "col": 5, "label": "სილამაზე"}
+ ],
+ "rules": [[48, 268, 864, 3, "#8CC63F"]],
+ "tag": {"x": 48, "y": 357, "size": 20, "lh": 26, "html": "ყველაფერი<br>ერთ სივრცეში<span class=\"bdot\"></span>"},
+ "meta": {"col": 5, "size": 16, "html": "2016 წლიდან"}
+}

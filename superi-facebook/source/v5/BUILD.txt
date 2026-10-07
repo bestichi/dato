@@ -1,0 +1,31 @@
+Superi.ge Facebook cover + logo: how to rebuild
+================================================
+
+Self-contained cover (this folder)
+  cover.html      960x540 page; links base.css (Noto Sans Georgian in fonts/), products in assets/
+                  (already Lanczos-resized to their exact on-canvas size, placed 1:1), logo lockup
+                  inline as outlined SVG (no fonts needed).
+  Render natively, then sharpen:
+    NODE_PATH=$(npm root -g) node <kit>/render.js $PWD/cover.html $PWD/cover_raw.png 960 540 1
+    python3 -c "from PIL import Image,ImageFilter;Image.open('cover_raw.png').convert('RGB').filter(ImageFilter.UnsharpMask(radius=1.0,percent=90,threshold=1)).save('cover-960x540.png',optimize=True)"
+  (render.js = Playwright/Chromium screenshot at deviceScaleFactor 1.)
+
+Full pipeline (scripts/ = copy of ../src/)
+  sh src/make.sh         build_cover.py (reads cover_cfg.json) -> render DSF 1 -> UnsharpMask(1.0, 90, 1)
+                         -> cover-960x540.png -> kit/fb_sim.py (sim_desktop / sim_mobile / sim_zones)
+  python3 src/check.py <final dir>   safe-zone report (desktop band, mobile profile disc, caption extents)
+  sh src/make_logos.sh   logo_build.py -> logo/*.svg, Chromium renders -> logo/*.png, favicon.ico (16/32/48)
+  python3 src/prep_products.py       re-cuts the LG InstaView fridge from the product pool
+
+Geometry (no fonts in any logo file)
+  geo.py      lines + true circular arcs -> SVG path data, nonzero union, holes reversed
+  letters.py  S. symbol: box 88x100, stroke module 24, two half-circle turns, square ends, dot = stroke.
+              wordmark 'superi.ge': x-height 100, stroke 22, true-circle bowls (p, e, g), symmetric u,
+              s = the S construction at x-height, vertical square-cut terminals (s, e, r, g),
+              i-dot and full stop = stroke diameter. Only the full stop is lime.
+  logo.py     lockup: disc = 40/18 x-height, gap = 12/18 x-height (0.3 disc), S. = 0.56 of the disc.
+              badge: S. height = 50% of 1080 (60% width), ink coverage 16.6%.
+
+Cover grid: 6 columns, 48px margins, 124px columns, 24px gutters (x 48/196/344/492/640/788).
+  rule 3px lime y=268 (x 48..912); products bottom on y=268; captions 16px NG 500 at y=281 (end y=298);
+  tagline 20px NG 600 at x=48 y=357; '2016 წლიდან' 16px on column 6, sharing the tagline's last baseline.
