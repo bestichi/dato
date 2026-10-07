@@ -16,6 +16,7 @@ alta.ge-ს სტილში, ყველა კატეგორიის�
 | [ტელეფონები, ტაბლეტები](https://superi.ge/telefonebi-tabletebi/) | [telefonebi-tabletebi](telefonebi-tabletebi/) |
 | [TV-ფოტო-ვიდეო](https://superi.ge/tv/) | [tv-foto-video](tv-foto-video/) |
 | [ტექნიკა](https://superi.ge/teqnika/) (მთავარი კატეგორიები) | [teqnika](teqnika/) |
+| [კლიმატური ტექნიკა](https://superi.ge/klimaturi-teqnika/) | [klimaturi-teqnika](klimaturi-teqnika/) |
 
 ## ბადე და hover: 6 ბანერი ერთ რიგში, ალტასავით
 
