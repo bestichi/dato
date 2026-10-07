@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+:root{--w:2048px;--h:1152px}
+body{background:var(--ink)}
+/* rising "sun" behind where the profile picture sits on mobile */
+.dome{width:1120px;height:1120px;border-radius:50%;background:var(--lime);left:464px;top:712px}
+.r1{width:1400px;height:1400px;border-radius:50%;border:4px solid rgba(242,243,238,.13);left:324px;top:572px}
+.r2{width:1720px;height:1720px;border-radius:50%;border:4px solid rgba(242,243,238,.08);left:164px;top:412px}
+/* side accents: bleed off the edges on purpose, safe to crop */
+.dl{width:300px;height:300px;border-radius:50%;background:var(--lime);left:-150px;top:300px}
+.dr{width:150px;height:150px;border-radius:50%;background:var(--paper);right:150px;top:262px}
+.block{left:0;width:2048px;top:252px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.eb{color:var(--lime);font-size:46px;font-weight:600;letter-spacing:.05em}
+.word{margin-top:0;color:var(--paper);font-size:232px;font-weight:800;letter-spacing:-.045em;line-height:1;display:flex;align-items:flex-start;gap:22px}
+.dom{color:var(--ink);background:var(--lime);font-size:52px;font-weight:700;padding:11px 20px 10px;border-radius:12px;letter-spacing:.02em;line-height:1;margin-top:30px}
+.tag{margin-top:42px;color:var(--paper);font-size:62px;font-weight:700;line-height:1.2}
+.tag em{font-style:normal;color:var(--lime)}
+</style></head><body>
+<div class="abs r2"></div>
+<div class="abs r1"></div>
+<div class="abs dome"></div>
+<div class="abs dl"></div>
+<div class="abs dr"></div>
+<div class="abs block">
+  <div class="word unb">SUPERI<span class="dom">.GE</span></div>
+  <div class="tag">ყველაფერი სახლისთვის — <em>ერთ სივრცეში</em></div>
+</div>
+</body></html>
