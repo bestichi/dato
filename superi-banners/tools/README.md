@@ -26,3 +26,7 @@ set `"sr": true` for that item or pick a bigger photo of the product from its su
 ```sh
 NODE_PATH=$(npm root -g) node preview_on_site.js ../<category>/banners.json ../subcategory-grid.css 1920
 ```
+
+`render_safe.py` renders a studio product shot of a safe with Blender (`pip install bpy==4.2.0`, Python 3.11)
+for categories that have no product photo on superi.ge; the transparent PNG goes straight into
+`make_banners.py` as a local `"src"`.

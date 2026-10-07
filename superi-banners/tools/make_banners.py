@@ -17,6 +17,7 @@ banners.json:
   "sr": true runs 2x EDSR super-resolution first (for photos where the product is under ~700px).
   Optional per item: "scale" (<1 shrinks the product), "dy" (vertical offset, px),
   "solid": true (fill the whole outline, for products whose body is nearly the background colour).
+  "src" may also be a file next to banners.json; a PNG with transparency is used as its own mask.
   Several products in one banner: replace "src"/"sr" with "parts", drawn back to front:
     "parts": [{"src": "...", "sr": false, "h": 1.0, "x": 0.0, "y": 0.0}, ...]
   h = height, x = horizontal centre, y = bottom above the floor; all in units of the same length.
@@ -41,6 +42,7 @@ MAX_W, MAX_H = 0.92, 0.90
 SHADOW_RGB, SHADOW_ALPHA = (92, 74, 140), 0.16
 SEG_PAD = 0.12   # white margin added around the photo before segmentation (keeps edge-touching products whole)
 
+BASE = Path('.')   # folder of the banners.json being rendered
 CACHE = Path(os.environ.get('SUPERI_CACHE', Path.home() / '.cache' / 'superi-banners'))
 MODELS = {
     'birefnet': 'https://github.com/danielgatis/rembg/releases/download/v0.0.0/BiRefNet-general-epoch_244.onnx',
@@ -175,9 +177,18 @@ def render(prod, out_path, scale=1.0, dy=0):
 def prepare(url, sr, work):
     """Download (+ optional super-resolution) and segment one photo; returns (photo, mask) paths."""
     work.mkdir(parents=True, exist_ok=True)
-    src = work / ('src' + (Path(urllib.parse.urlparse(url).path).suffix or '.img'))
-    if not src.exists():
-        fetch(url, src)
+    if not url.startswith('http'):
+        # local file next to banners.json, e.g. a studio render with a transparent background
+        src = (BASE / url).resolve()
+        im = Image.open(src)
+        if im.mode in ('RGBA', 'LA') and im.getextrema()[-1][0] < 255:
+            mask = work / 'mask.png'
+            im.getchannel('A').save(mask)
+            return src, mask
+    else:
+        src = work / ('src' + (Path(urllib.parse.urlparse(url).path).suffix or '.img'))
+        if not src.exists():
+            fetch(url, src)
     if sr:
         up = work / 'sr.png'
         if not up.exists():
@@ -229,6 +240,8 @@ def main():
     cfg_path = Path(args.config).resolve()
     cfg = json.loads(cfg_path.read_text(encoding='utf-8'))
     out_dir = cfg_path.parent
+    global BASE
+    BASE = out_dir
     for it in cfg['items']:
         name = it['file']
         if args.only and not any(o in name for o in args.only):
