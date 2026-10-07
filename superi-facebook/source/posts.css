@@ -1,11 +1,11 @@
 :root{--w:1080px;--h:1350px}
 body{background:var(--paper);color:var(--ink);display:flex;flex-direction:column}
 .top{display:flex;justify-content:space-between;align-items:center;padding:52px 60px 0}
-.brand{display:flex;align-items:center;gap:14px;font-family:"UNB";font-weight:800;font-size:30px;letter-spacing:-.03em}
-.brand .mk{width:52px;height:52px;border-radius:50%;background:var(--lime);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;color:var(--ink)}
-.brand span{color:var(--deep)}
-.dark .brand{color:var(--paper)} .dark .brand span{color:var(--lime)}
-.limebg .brand span{color:var(--ink)} .limebg .brand .mk{background:var(--ink);color:var(--lime)}
+.brand{display:flex;align-items:center}
+.brand img{height:56px;display:block}
+.brand .lg-light{display:none}
+.dark .brand .lg-dark{display:none} .dark .brand .lg-light{display:block}
+.limebg .brand{background:var(--paper);border-radius:999px;padding:8px 20px}
 .cat{background:var(--ink);color:var(--paper);border-radius:999px;padding:12px 24px;font-size:24px;font-weight:600}
 .dark .cat{background:var(--lime);color:var(--ink)}
 .foot{margin-top:auto;background:var(--ink);color:var(--paper);display:flex;justify-content:space-between;align-items:center;padding:0 60px;height:104px;font-size:26px;font-weight:600}

@@ -22,7 +22,9 @@ def page(body, cls="", extra_css=""):
 
 
 def top(cat):
-    return f'<div class="top"><div class="brand"><div class="mk">S.</div><div>superi<span>.ge</span></div></div><div class="cat">{cat}</div></div>'
+    # the client's own logo (kept by request): dark-text version on light/lime posts, white-text version on dark posts
+    return (f'<div class="top"><div class="brand"><img class="lg-dark" src="../assets/logo_current_dark.png">'
+            f'<img class="lg-light" src="../assets/logo_current_light.png"></div><div class="cat">{cat}</div></div>')
 
 
 # ---------- templates ----------
@@ -114,9 +116,8 @@ def t_brand(d):
 body{background:var(--ink);color:var(--paper)}
 .hero{padding:70px 60px 0;position:relative}
 .eb{color:var(--lime);font-size:28px;font-weight:600;letter-spacing:.05em}
-.w{font-family:"UNB";font-weight:800;font-size:132px;letter-spacing:-.05em;line-height:1;margin-top:14px}
-.w span{color:var(--lime)}
-.tg{font-size:40px;font-weight:700;line-height:1.25;margin-top:24px}
+.hlogo{height:56px;display:block;margin-bottom:34px}
+.tg{font-size:58px;font-weight:800;line-height:1.18;margin-top:18px}
 .tg em{font-style:normal;color:var(--lime)}
 .cards{padding:44px 60px 0;display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .c{background:var(--ink2);border:1px solid rgba(242,243,238,.10);border-radius:28px;padding:28px 28px 30px;min-height:196px}
@@ -127,7 +128,7 @@ body{background:var(--ink);color:var(--paper)}
 .strip img{filter:drop-shadow(0 16px 18px rgba(0,0,0,.45))}
 """
     cards = "".join(f'<div class="c"><div class="i">{c[0]}</div><b>{c[1]}</b><span>{c[2]}</span></div>' for c in d['cards'])
-    body = f"""<div class="hero"><div class="eb">ონლაინ მაღაზია · 2016 წლიდან</div><div class="w">SUPERI<span>.GE</span></div>
+    body = f"""<div class="hero"><img class="hlogo" src="../assets/logo_current_light.png"><div class="eb">ონლაინ მაღაზია · 2016 წლიდან</div>
 <div class="tg">ყველაფერი შენი სახლისთვის<br><em>— ერთ სივრცეში</em></div></div>
 <div class="cards">{cards}</div>
 <div class="strip"><img src="../assets/c_tv2.webp" style="height:180px"><img src="../assets/coffee.webp" style="height:200px"><img src="../assets/c_chair.webp" style="height:180px"><img src="../assets/c_laptop.webp" style="height:140px"><img src="../assets/c_smeg.webp" style="height:170px"></div>
