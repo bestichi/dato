@@ -6,15 +6,15 @@
 
 ![preview](preview.png)
 
-| ფაილი | ქვეკატეგორია | პროდუქტები (superi.ge-დან) |
+| ფაილი | ქვეკატეგორია | პროდუქტი (superi.ge-დან) |
 |---|---|---|
-| `01-kondicionerebi.png` | [კონდიციონერები](https://superi.ge/kondicionerebi/) | Midea MSAG (ნაცრისფერ-ლურჯი) + Mayer TAC (შავი) + Midea XT (ოქროსფერი) |
+| `01-kondicionerebi.png` | [კონდიციონერები](https://superi.ge/kondicionerebi/) | Midea XT-09N8D6 (ოქროსფერი) |
 | `02-gazis-gamatboblebi.png` | [გაზის გამათბობლები](https://superi.ge/gazis-gamatboblebi/) | Fujiyama FHS 12000 MFC |
-| `03-eleqtro-gamatboblebi.png` | [ელექტრო გამათბობლები](https://superi.ge/eleqtro-gamatboblebi/) | Kumtel KS-2760 + Kumtel MH-1800 |
-| `04-ventilatorebi.png` | [ვენტილატორები](https://superi.ge/ventilatorebi/) | Reffon FS-40M (ოქროსფერი) + Sencor SFN 4080 (ხის სამფეხით) |
+| `03-eleqtro-gamatboblebi.png` | [ელექტრო გამათბობლები](https://superi.ge/eleqtro-gamatboblebi/) | Kumtel MH-1800 (ინფრაწითელი კოშკი) |
+| `04-ventilatorebi.png` | [ვენტილატორები](https://superi.ge/ventilatorebi/) | Sencor SFN 4080 (ხის სამფეხით) |
 | `05-tsentraluri-gatbobis-qvabi.png` | [ცენტრალური გათბობის ქვაბი](https://superi.ge/tsentraluri-gatbobis-qvabi/) | Beko Prodens 30 Premix |
-| `06-tsklis-gamatskheleblebi.png` | [წყლის გამაცხელებლები](https://superi.ge/tsklis-gamatskheleblebi/) | Kettler JSG12GT (ლურჯი) + Midea MWH15 |
-| `07-haeris-gamtsmendi-da-damatenianeblebi.png` | [ჰაერის გამწმენდი და დამატენიანებლები](https://superi.ge/haeris-gamtsmendi-da-damatenianeblebi/) | Beko ATP5500N + Dreame PM20 |
+| `06-tsklis-gamatskheleblebi.png` | [წყლის გამაცხელებლები](https://superi.ge/tsklis-gamatskheleblebi/) | Kettler JSG12GT (ლურჯი) |
+| `07-haeris-gamtsmendi-da-damatenianeblebi.png` | [ჰაერის გამწმენდი და დამატენიანებლები](https://superi.ge/haeris-gamtsmendi-da-damatenianeblebi/) | Beko ATP5500N |
 | `08-tenis-amomshrobebi.png` | [ნესტის შემწოვი აპარატები](https://superi.ge/tenis-amomshrobebi/) | Sencor SDH 1210WH |
 
 წყაროები და განლაგება: [banners.json](banners.json).

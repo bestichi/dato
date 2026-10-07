@@ -6,25 +6,8 @@
    "file": "01-kondicionerebi",
    "label": "კონდიციონერები",
    "url": "https://superi.ge/kondicionerebi/",
-   "parts": [
-    {
-     "src": "https://superi.ge/images/detailed/43/64900d0a0f628.png",
-     "h": 0.3,
-     "x": -0.14,
-     "y": 0.5
-    },
-    {
-     "src": "https://superi.ge/images/detailed/43/210a7a36-5e15-4bbf-a117-3f025aa8a3a1_nl01-sj.png",
-     "h": 0.3,
-     "x": 0.0,
-     "y": 0.25
-    },
-    {
-     "src": "https://superi.ge/images/detailed/29/90653template_be_gevo_enl.jpg",
-     "h": 0.3,
-     "x": 0.14
-    }
-   ]
+   "src": "https://superi.ge/images/detailed/29/90653template_be_gevo_enl.jpg",
+   "sr": false
   },
   {
    "file": "02-gazis-gamatboblebi",
@@ -37,35 +20,15 @@
    "file": "03-eleqtro-gamatboblebi",
    "label": "ელექტრო გამათბობლები",
    "url": "https://superi.ge/eleqtro-gamatboblebi/",
-   "parts": [
-    {
-     "src": "https://superi.ge/images/detailed/21/38799KUMTEL_MH_1800uv_enl.jpg",
-     "h": 1.0,
-     "x": 0.5
-    },
-    {
-     "src": "https://superi.ge/images/detailed/20/811xIN2qnGL._AC_SL1500_.jpg",
-     "h": 0.62,
-     "x": 0.0
-    }
-   ]
+   "src": "https://superi.ge/images/detailed/21/38799KUMTEL_MH_1800uv_enl.jpg",
+   "sr": false
   },
   {
    "file": "04-ventilatorebi",
    "label": "ვენტილატორები",
    "url": "https://superi.ge/ventilatorebi/",
-   "parts": [
-    {
-     "src": "https://superi.ge/images/detailed/22/108890_1.jpg",
-     "h": 0.95,
-     "x": 0.5
-    },
-    {
-     "src": "https://superi.ge/images/detailed/43/05d92901-6919-4207-a015-8495996795d3.png",
-     "h": 1.0,
-     "x": 0.0
-    }
-   ]
+   "src": "https://superi.ge/images/detailed/22/108890_1.jpg",
+   "sr": false
   },
   {
    "file": "05-tsentraluri-gatbobis-qvabi",
@@ -78,36 +41,15 @@
    "file": "06-tsklis-gamatskheleblebi",
    "label": "წყლის გამაცხელებლები",
    "url": "https://superi.ge/tsklis-gamatskheleblebi/",
-   "parts": [
-    {
-     "src": "https://superi.ge/images/detailed/36/1998070431239.png",
-     "h": 1.0,
-     "x": 0.0,
-     "sr": true
-    },
-    {
-     "src": "https://superi.ge/images/detailed/44/64a437c023224.png",
-     "h": 0.6,
-     "x": 0.55
-    }
-   ]
+   "src": "https://superi.ge/images/detailed/36/1998070431239.png",
+   "sr": true
   },
   {
    "file": "07-haeris-gamtsmendi-da-damatenianeblebi",
    "label": "ჰაერის გამწმენდი და დამატენიანებლები",
    "url": "https://superi.ge/haeris-gamtsmendi-da-damatenianeblebi/",
-   "parts": [
-    {
-     "src": "https://superi.ge/images/detailed/53/product-001-01_gbk8-bc.webp",
-     "h": 1.0,
-     "x": 0.0
-    },
-    {
-     "src": "https://superi.ge/images/detailed/58/product-001-01_phe6-ng.webp",
-     "h": 0.72,
-     "x": 0.52
-    }
-   ]
+   "src": "https://superi.ge/images/detailed/53/product-001-01_gbk8-bc.webp",
+   "sr": false
   },
   {
    "file": "08-tenis-amomshrobebi",
