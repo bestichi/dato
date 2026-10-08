@@ -1,6 +1,9 @@
 # საყოფაცხოვრებო ტექნიკა — ქვეკატეგორიების ბანერები
 
-კატეგორია: [საყოფაცხოვრებო ტექნიკა](https://superi.ge/sakopatskhovrebo-teqnika/) · 800×800 PNG · თითო ბარათზე ერთი პროდუქტი · სტილი: [../README.md](../README.md)
+კატეგორია: [საყოფაცხოვრებო ტექნიკა](https://superi.ge/sakopatskhovrebo-teqnika/) · 800×800 PNG · სტილი: [../README.md](../README.md)
+
+ერთიანი, მშვიდი პალიტრა: უჟანგავი ფოლადი, შავი მინა, თეთრი. თანამედროვე, ტიპური მოდელები, თითო ბარათზე ერთი;
+ფერადი აქცენტი მხოლოდ ფუნქციიდან (ცისფერი ალი, ნათურით განათებული ღუმელი, წყლის ბოთლი).
 
 შენს გვერდზე, [`subcategory-grid.css`](../subcategory-grid.css)-ით:
 
@@ -8,16 +11,16 @@
 
 | ფაილი | ქვეკატეგორია | პროდუქტი (superi.ge-დან) |
 |---|---|---|
-| `01-macivrebi.png` | [მაცივრები](https://superi.ge/macivrebi/) | LG GR-A34FDMKJ InstaView (ბორდოსფერი/ყვითელი) |
-| `02-saretskhi-manqanebi.png` | [სარეცხი მანქანები](https://superi.ge/saretskhi-manqanebi/) | Gorenje W5NGPI72SBSS |
-| `03-sakinule.png` | [საყინულეები](https://superi.ge/sakinule/) | Beko CF316EWN |
-| `04-churchelis-saretskhi-manqanebi.png` | [ჭურჭლის სარეცხი მანქანები](https://superi.ge/churchelis-sarecxhi-manqanebi/) | Gorenje GV642D90 |
-| `05-quris-zedapiri.png` | [ქურის ზედაპირი](https://superi.ge/quris-zedapiri/) | Gorenje GW6D42CLI (კრემისფერი) |
-| `06-chasashenebeli-ghumelebi.png` | [ჩასაშენებელი ღუმელები](https://superi.ge/chasashenebeli-ghumelebi/) | Beko RBIM 19200 (შავი, ოქროსფერი სახელურებით) |
-| `07-chasashenebeli-saretskhi-manqanebi.png` | [ჩასაშენებელი სარეცხი მანქანები](https://superi.ge/chasashenebeli-saretskhi-manqanebi/) | Electrolux EWN7F447WI |
-| `08-dispenserebi.png` | [დისპენსერები](https://superi.ge/dispenserebi/) | Dixi BY601 (შავი, დამალული ავზით) |
-| `09-gamtsovi.png` | [გამწოვი](https://superi.ge/gamtsovi/) | Beko CWB 6410 CR (კრემისფერი) |
-| `10-sashrobebi.png` | [საშრობი მანქანები](https://superi.ge/sashrobebi/) | AEG TR838P4JE |
-| `11-gazqurebi.png` | [გაზქურები](https://superi.ge/gazqurebi/) | Alneo ALN6080B Cream |
+| `01-macivrebi.png` | [მაცივრები](https://superi.ge/macivrebi/) | GORENJE NRS8182KX |
+| `02-saretskhi-manqanebi.png` | [სარეცხი მანქანები](https://superi.ge/saretskhi-manqanebi/) | BOSCH WAN28201ME (8კგ) |
+| `03-sakinule.png` | [საყინულეები](https://superi.ge/sakinule/) | BEKO CF200EWN b100 (198ლ) |
+| `04-churchelis-saretskhi-manqanebi.png` | [ჭურჭლის სარეცხი მანქანები](https://superi.ge/churchelis-sarecxhi-manqanebi/) | GORENJE GS541D10X |
+| `05-quris-zedapiri.png` | [ქურის ზედაპირი](https://superi.ge/quris-zedapiri/) | KUMTEL KO-40TAHDF B |
+| `06-chasashenebeli-ghumelebi.png` | [ჩასაშენებელი ღუმელები](https://superi.ge/chasashenebeli-ghumelebi/) | GORENJE BOS6747A01X |
+| `07-chasashenebeli-saretskhi-manqanebi.png` | [ჩასაშენებელი სარეცხი მანქანები](https://superi.ge/chasashenebeli-saretskhi-manqanebi/) | BEKO WITC 7613 XW (7კგ) |
+| `08-dispenserebi.png` | [დისპენსერები](https://superi.ge/dispenserebi/) | BEKO BSS 2201 TT |
+| `09-gamtsovi.png` | [გამწოვი](https://superi.ge/gamtsovi/) | BOSCH DWK66AJ60T |
+| `10-sashrobebi.png` | [საშრობი მანქანები](https://superi.ge/sashrobebi/) | BOSCH WQK25200ME (10კგ) |
+| `11-gazqurebi.png` | [გაზქურები](https://superi.ge/gazqurebi/) | BEKO FBE6330GXDSN |
 
 წყაროები: [banners.json](banners.json).

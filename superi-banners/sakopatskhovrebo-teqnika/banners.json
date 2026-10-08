@@ -6,90 +6,90 @@
    "file": "01-macivrebi",
    "label": "მაცივრები",
    "url": "https://superi.ge/macivrebi/",
-   "src": "https://superi.ge/images/detailed/38/DZ1.png",
+   "src": "https://superi.ge/images/detailed/22/f59eab13-8ae4-58cb-bdaa-2bf6afbe85f4.jpg",
    "sr": false,
-   "product": "LG GR-A34FDMKJ InstaView (ბორდოსფერი/ყვითელი)"
+   "product": "მაცივარი GORENJE NRS8182KX"
   },
   {
    "file": "02-saretskhi-manqanebi",
    "label": "სარეცხი მანქანები",
    "url": "https://superi.ge/saretskhi-manqanebi/",
-   "src": "https://superi.ge/images/detailed/41/33083742.jpg",
+   "src": "https://superi.ge/images/detailed/40/26708065_WAN28201ME_STP_def.webp",
    "sr": false,
-   "product": "Gorenje W5NGPI72SBSS"
+   "product": "სარეცხი მანქანა BOSCH WAN28201ME (8კგ)"
   },
   {
    "file": "03-sakinule",
    "label": "საყინულეები",
    "url": "https://superi.ge/sakinule/",
-   "src": "https://superi.ge/images/detailed/33/original.png",
+   "src": "https://superi.ge/images/detailed/31/original__29_.png",
    "sr": false,
-   "product": "Beko CF316EWN"
+   "product": "საყინულე BEKO CF200EWN b100 (198ლ)"
   },
   {
    "file": "04-churchelis-saretskhi-manqanebi",
    "label": "ჭურჭლის სარეცხი მანქანები",
    "url": "https://superi.ge/churchelis-sarecxhi-manqanebi/",
-   "src": "https://superi.ge/images/detailed/49/product-001-15_pub5-4c.webp",
+   "src": "https://superi.ge/images/detailed/12/IMG-000027263-1.jpg",
    "sr": false,
-   "product": "Gorenje GV642D90"
+   "product": "ჭურჭლის სარეცხი მანქანა GORENJE GS541D10X"
   },
   {
    "file": "05-quris-zedapiri",
    "label": "ქურის ზედაპირი",
    "url": "https://superi.ge/quris-zedapiri/",
-   "src": "https://superi.ge/images/detailed/43/MABAGOR-515Wx515H-mabagor-imagelib-full-trim-f-4-f4a098b80cd0d6847bb49089f394e73c-309293-fpng.webp",
-   "sr": true,
-   "product": "Gorenje GW6D42CLI (კრემისფერი)",
+   "src": "https://superi.ge/images/detailed/18/19d3a7eb-b418-480e-b5b9-1701799d8939-1.jpg",
+   "sr": false,
+   "product": "ქურის ზედაპირი KUMTEL KO-40TAHDF B",
    "solid": true
   },
   {
    "file": "06-chasashenebeli-ghumelebi",
    "label": "ჩასაშენებელი ღუმელები",
    "url": "https://superi.ge/chasashenebeli-ghumelebi/",
-   "src": "https://superi.ge/images/detailed/37/beko_ugradna_rerna_rbim19200ad_1.jpg",
-   "sr": true,
-   "product": "Beko RBIM 19200 (შავი, ოქროსფერი სახელურებით)"
+   "src": "https://superi.ge/images/detailed/18/orig_ghrk-mf.webp",
+   "sr": false,
+   "product": "ღუმელი GORENJE BOS6747A01X"
   },
   {
    "file": "07-chasashenebeli-saretskhi-manqanebi",
    "label": "ჩასაშენებელი სარეცხი მანქანები",
    "url": "https://superi.ge/chasashenebeli-saretskhi-manqanebi/",
-   "src": "https://superi.ge/images/detailed/30/Electrolux-EWN7F447WI_photo_1.jpg",
+   "src": "https://superi.ge/images/detailed/30/orig39_1665243885__1_.png",
    "sr": false,
-   "product": "Electrolux EWN7F447WI"
+   "product": "ჩასაშენებელი სარეცხი მანქანა BEKO WITC 7613 XW (7კგ)"
   },
   {
    "file": "08-dispenserebi",
    "label": "დისპენსერები",
    "url": "https://superi.ge/dispenserebi/",
-   "src": "https://superi.ge/images/detailed/39/დისპენსერი.webp",
+   "src": "https://superi.ge/images/detailed/28/original_cf79-61.png",
    "sr": false,
-   "product": "Dixi BY601 (შავი, დამალული ავზით)"
+   "product": "დისპენსერი BEKO BSS 2201 TT"
   },
   {
    "file": "09-gamtsovi",
    "label": "გამწოვი",
    "url": "https://superi.ge/gamtsovi/",
-   "src": "https://superi.ge/images/detailed/16/7702388602-LO1-20150720-102529.png",
+   "src": "https://superi.ge/images/detailed/26/MCSA02761906_DWK65AD60R_Schraegesse_Bosch_STP_def.webp",
    "sr": false,
-   "product": "Beko CWB 6410 CR (კრემისფერი)"
+   "product": "გამწოვი BOSCH DWK66AJ60T"
   },
   {
    "file": "10-sashrobebi",
    "label": "საშრობი მანქანები",
    "url": "https://superi.ge/sashrobebi/",
-   "src": "https://superi.ge/images/detailed/58/ad66f537-fe06-4067-8ec9-a2e75f8ac0d6.png",
+   "src": "https://superi.ge/images/detailed/40/27133205_WQK25200ME_STP_def.webp",
    "sr": false,
-   "product": "AEG TR838P4JE"
+   "product": "საშრობი მანქანა BOSCH WQK25200ME (10კგ)"
   },
   {
    "file": "11-gazqurebi",
    "label": "გაზქურები",
    "url": "https://superi.ge/gazqurebi/",
-   "src": "https://superi.ge/images/detailed/43/01688.png",
-   "sr": true,
-   "product": "Alneo ALN6080B Cream"
+   "src": "https://superi.ge/images/detailed/55/1731489763_7739486722_FBE6330GXDSN_MDM2_LOW_1.png",
+   "sr": false,
+   "product": "გაზქურა BEKO FBE6330GXDSN"
   }
  ]
 }

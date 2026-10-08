@@ -186,6 +186,13 @@ def prepare(url, sr, work):
             im.getchannel('A').save(mask)
             return src, mask
     else:
+        # the cache folder is per banner: if its photo URL changed, drop the old photo, upscale and mask
+        stamp = work / 'source.txt'
+        key = f'{url}\nsr={bool(sr)}'
+        if not stamp.exists() or stamp.read_text() != key:
+            for old in work.iterdir():
+                old.unlink()
+            stamp.write_text(key)
         src = work / ('src' + (Path(urllib.parse.urlparse(url).path).suffix or '.img'))
         if not src.exists():
             fetch(url, src)
