@@ -28,6 +28,14 @@
 
 ---
 
+## 2ა. კონტაქტის გვერდი — ბმული Google Maps-ზე
+
+კონტაქტის გვერდზე ახლა ასეთი ბმულია: `https://www.google.com/maps/search/?api=1&query=მუხრან მაჭავარიანის 62, თბილისი`. ის Maps-ის ძიებას ხსნის და არა თქვენს ბიზნეს-პროფილს.
+
+ჩაანაცვლეთ GBP-ის ბმულით: Google Maps → თქვენი პროფილი → „გაზიარება“ → ბმულის კოპირება.
+
+---
+
 ## 3. Schema — Organization JSON-LD `<head>`-ში
 
 **სად:** ბლოკი, რომელიც იწყება `"@id": "https://superi.ge/#organization"`-ით. ის შეიძლება იყოს თემის შაბლონში, SEO add-on-ის პარამეტრებში ან head-ის custom კოდში.
@@ -81,6 +89,6 @@
 
 ## 6. იგივე საათები სხვაგანაც
 
-- Google Business Profile (როცა შეიქმნება)
+- Google Business Profile (არსებული პროფილი): საათები, სახელი „Superi.ge“, მისამართი „მუხრან მაჭავარიანის ქ. 62“, საიტი https://superi.ge/
 - Facebook: `facebook.com/Superi.ge` → შესახებ → სამუშაო საათები
 - yell.ge (ჩანაწერი 162718)
