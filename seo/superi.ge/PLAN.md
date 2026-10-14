@@ -238,3 +238,25 @@ CS-Cart-ის API ღიაა (`https://superi.ge/api/` → 401 გასა�
 რამდენია Indexed / Not indexed და რა მიზეზებით („Crawled – currently not indexed“, „Duplicate, Google chose different canonical“ …).
 ამით გადავწყვეტთ, ღირს თუ არა მობილურების ვარიანტების გაერთიანება (57 000 ჩვენება) და სხვა მასობრივი გასწორება.
 
+**ინდექსაციის ანგარიში (Search Console → Indexing → Pages, „All known pages“, ბოლო განახლება 2026-10-05):**
+
+| მაჩვენებელი | მნიშვნელობა | შეფასება |
+|---|---|---|
+| Indexed | 5 825 (24.07) → **8 497** (05.10), +46% | ✅ იზრდება |
+| Not indexed | 89 009 → 63 112 | ✅ მცირდება (robots.txt მუშაობს) |
+| Excluded by ‘noindex’ | 43 538 | ფილტრები/სორტირება — განზრახ |
+| Blocked by robots.txt | 11 269 | განზრახ |
+| Alternate page with proper canonical | 2 210 | ნორმა (პარამეტრიანი URL-ები) |
+| Page with redirect | 1 031 | ნორმა (გადარქმეული URL-ები) |
+| Not found (404) | 654 | ძველი წაშლილი პროდუქტები — ნორმა |
+| **Crawled – currently not indexed** | **4 013** | ⚠️ უცნობია, რა გვერდებია |
+| Duplicate, Google chose different canonical | 242 | ⚠️ Google დუბლიკატებად თვლის (სავარაუდოდ ფერის ვარიანტები) |
+| Discovered – currently not indexed | 113 | მცირე |
+| Soft 404 / 5xx / redirect error | 21 / 10 / 2 | მცირე |
+
+**შემდეგი მონაცემი:** (1) იგივე ანგარიში ფილტრით „All submitted pages“ (მხოლოდ sitemap-ის URL-ები) → ექსპორტი;
+(2) „Crawled – currently not indexed“ → Export (მაგალითი URL-ები). ამით დავადგენთ, რამდენი რეალური პროდუქტი/კატეგორია
+არ არის Google-ში და რა ტიპისაა (ვარიანტები, მარაგში არ მყოფი, ძველი, პარამეტრიანი).
+
+ბანერი და ელექტრო გამათბობლების სათაური — 2026-10-14-ის მეორე შემოწმებით ჯერ არ არის საიტზე.
+
