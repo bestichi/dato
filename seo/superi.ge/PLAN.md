@@ -166,3 +166,14 @@ Google Ads და რეგულარული ბლოგი. Search Console
 დეტალები და ზუსტი ტექსტები: [`05-search-console-quick-wins.md`](05-search-console-quick-wins.md).
 
 შემდეგი კანდიდატები: მობილურების ვარიაციები (57 000 ჩვენება, ერთ მოდელს 3–5 URL), სარბენი ბილიკები.
+
+**შესრულება API-ით (მფლობელის თხოვნით Claude ცვლის):**
+CS-Cart-ის API ღიაა (`https://superi.ge/api/` → 401 გასაღების გარეშე). ადმინკაზე წვდომა არ არის, საჭიროა API გასაღები.
+1. მფლობელი: ადმინკა → Customers → Administrators → ადმინი → ჩანართი „API access“ → ჩართვა → გასაღები.
+2. მფლობელი: Claude-ის გარემოს პარამეტრებში ცვლადები `SUPERI_API_EMAIL` (ადმინის ელფოსტა) და `SUPERI_API_KEY`.
+   გასაღები ჩატში არ იწერება. ცვლადები მხოლოდ ახალ სესიაში ჩანს.
+3. ახალ სესიაში (ამ ბრენჩზე):
+   - `python3 seo/superi.ge/tools/apply_titles.py` — dry run, აჩვენებს ახლანდელ და ახალ მნიშვნელობებს;
+   - `python3 seo/superi.ge/tools/apply_titles.py --apply` — backup (`tools/backups/`), ცვლილება, ცოცხალი სათაურის შემოწმება;
+   - უკან დაბრუნება: `--rollback tools/backups/titles-….json`.
+   - backup-ის commit, მფლობელისთვის შედეგის შეტყობინება; ტესტის საწყისი თარიღის ჩაწერა აქ.
