@@ -18,6 +18,7 @@ banners.json:
   Optional per item: "scale" (<1 shrinks the product), "dy" (vertical offset, px),
   "solid": true (fill the whole outline, for products whose body is nearly the background colour).
   "src" may also be a file next to banners.json; a PNG with transparency is used as its own mask.
+  "crop": [left, top, right, bottom] fractions of the photo, to cut off a badge or a second product.
   Several products in one banner: replace "src"/"sr" with "parts", drawn back to front:
     "parts": [{"src": "...", "sr": false, "h": 1.0, "x": 0.0, "y": 0.0}, ...]
   h = height, x = horizontal centre, y = bottom above the floor; all in units of the same length.
@@ -48,7 +49,7 @@ MODELS = {
     'birefnet': 'https://github.com/danielgatis/rembg/releases/download/v0.0.0/BiRefNet-general-epoch_244.onnx',
     'edsr': 'https://raw.githubusercontent.com/Saafke/EDSR_Tensorflow/master/models/EDSR_x2.pb',
 }
-UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36'
+UA = 'Mozilla/5.0'   # a full Chrome UA from curl trips superi.ge's Cloudflare bot check (403)
 
 
 def fetch(url, dest):
@@ -174,8 +175,9 @@ def render(prod, out_path, scale=1.0, dy=0):
     return nw, nh, k
 
 
-def prepare(url, sr, work):
-    """Download (+ optional super-resolution) and segment one photo; returns (photo, mask) paths."""
+def prepare(url, sr, work, crop=None):
+    """Download (+ optional crop and super-resolution) and segment one photo; returns (photo, mask) paths.
+    crop = [left, top, right, bottom] as fractions of the photo, to cut off badges or a second product."""
     work.mkdir(parents=True, exist_ok=True)
     if not url.startswith('http'):
         # local file next to banners.json, e.g. a studio render with a transparent background
@@ -188,7 +190,7 @@ def prepare(url, sr, work):
     else:
         # the cache folder is per banner: if its photo URL changed, drop the old photo, upscale and mask
         stamp = work / 'source.txt'
-        key = f'{url}\nsr={bool(sr)}'
+        key = f'{url}\nsr={bool(sr)}\ncrop={crop}'
         if not stamp.exists() or stamp.read_text() != key:
             for old in work.iterdir():
                 old.unlink()
@@ -196,6 +198,13 @@ def prepare(url, sr, work):
         src = work / ('src' + (Path(urllib.parse.urlparse(url).path).suffix or '.img'))
         if not src.exists():
             fetch(url, src)
+        if crop:
+            cropped = work / 'crop.png'
+            if not cropped.exists():
+                im = Image.open(src)
+                w, h = im.size
+                im.crop((round(crop[0] * w), round(crop[1] * h), round(crop[2] * w), round(crop[3] * h))).save(cropped)
+            src = cropped
     if sr:
         up = work / 'sr.png'
         if not up.exists():
@@ -256,7 +265,8 @@ def main():
         if 'parts' in it:
             prod = compose_group(it['parts'])
         else:
-            prod = cutout(*prepare(it['src'], it.get('sr', False), CACHE / 'work' / out_dir.name / name), it.get('solid', False))
+            prod = cutout(*prepare(it['src'], it.get('sr', False), CACHE / 'work' / out_dir.name / name, it.get('crop')),
+                          it.get('solid', False))
         nw, nh, k = render(prod, out_dir / f'{name}.png', it.get('scale', 1.0), it.get('dy', 0))
         print(f'{name}.png  product {nw}x{nh}px  source x{k:.2f}' + ('  (upscaled, consider "sr": true)' if k > 1.05 else ''),
               flush=True)

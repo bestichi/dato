@@ -30,3 +30,14 @@ NODE_PATH=$(npm root -g) node preview_on_site.js ../<category>/banners.json ../s
 `render_safe.py` renders a studio product shot of a safe with Blender (`pip install bpy==4.2.0`, Python 3.11)
 for categories that have no product photo on superi.ge; the transparent PNG goes straight into
 `make_banners.py` as a local `"src"`.
+
+`preview_offline.js` does the same on a saved copy of a category page with the site's own stylesheet
+(`site-snapshot/`), for when superi.ge's Cloudflare check blocks automated browsers:
+
+```sh
+NODE_PATH=$(npm root -g) node preview_offline.js site-snapshot/category-page.html site-snapshot/superi-standalone.css \
+  ../<category>/banners.json ../subcategory-grid.css ../<category>/preview.png
+```
+
+Photo downloads use the plain `Mozilla/5.0` user agent: a full Chrome UA from curl gets a 403 from the same check.
+`"crop": [left, top, right, bottom]` (fractions) trims a photo before the cut-out, e.g. to drop a badge.

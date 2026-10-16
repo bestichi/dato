@@ -20,6 +20,7 @@ alta.ge-ს სტილში, ყველა კატეგორიის�
 | [საყოფაცხოვრებო ტექნიკა](https://superi.ge/sakopatskhovrebo-teqnika/) | [sakopatskhovrebo-teqnika](sakopatskhovrebo-teqnika/) |
 | სეიფები (3D რენდერი — საიტზე სეიფის ფოტო არ არის) | [seifebi](seifebi/) |
 | [მაუსები](https://superi.ge/mausebi/) | [mausebi](mausebi/) |
+| [ნოუთბუქები, კომპიუტერები, მონიტორები](https://superi.ge/noutbuqebi-kompiuterebi-monitorebi/) | [noutbuqebi-kompiuterebi-monitorebi](noutbuqebi-kompiuterebi-monitorebi/) |
 
 ## ბადე და hover: 6 ბანერი ერთ რიგში, ალტასავით
 

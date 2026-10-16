@@ -1,0 +1,68 @@
+{
+ "category": "ნოუთბუქები, კომპიუტერები, მონიტორები",
+ "category_url": "https://superi.ge/noutbuqebi-kompiuterebi-monitorebi/",
+ "items": [
+  {
+   "file": "01-monoblokebi-all-in-one",
+   "label": "მონობლოკები All in One",
+   "url": "https://superi.ge/all-in-one/",
+   "src": "https://superi.ge/images/detailed/29/1-ideacentre-aio-24irh9-ct1-03-v1-600.webp",
+   "sr": true,
+   "product": "Lenovo IdeaCentre AIO 24IRH9"
+  },
+  {
+   "file": "02-noutbuqebi",
+   "label": "ნოუთბუქები",
+   "url": "https://superi.ge/noutbuqebi/",
+   "src": "https://superi.ge/images/detailed/59/BK9Y9EA_4_optimized.png",
+   "sr": false,
+   "product": "HP OmniBook 5 16 (Sky Blue)"
+  },
+  {
+   "file": "03-monitorebi",
+   "label": "მონიტორები",
+   "url": "https://superi.ge/monitor/",
+   "src": "https://superi.ge/images/detailed/31/71d_syB870L._AC_SL1500_.webp",
+   "sr": false,
+   "product": "Samsung ViewFinity S9 27\" 5K (LS27C902PAIXCI)",
+   "crop": [
+    0.215,
+    0,
+    1,
+    1
+   ]
+  },
+  {
+   "file": "04-konsolebi-da-aqsesuarebi",
+   "label": "კონსოლები და აქსესუარები",
+   "url": "https://superi.ge/konsolebi-da-aqsesuarebi/",
+   "src": "https://superi.ge/images/detailed/13/117075_2.png",
+   "sr": false,
+   "product": "Microsoft Xbox Series S 512GB (White)"
+  },
+  {
+   "file": "05-kompiuteris-aqsesuarebi",
+   "label": "კომპიუტერის აქსესუარები",
+   "url": "https://superi.ge/kompiuteris-aqsesuarebi/",
+   "src": "https://superi.ge/images/detailed/19/71keUmIzAZL._AC_SL1500_.jpg",
+   "sr": false,
+   "product": "Logitech K360"
+  },
+  {
+   "file": "06-gaming-magida-savardzlebi",
+   "label": "GAMING მაგიდა-სავარძლები",
+   "url": "https://superi.ge/gaming/",
+   "src": "https://superi.ge/images/detailed/23/Gaming_სავარძელლი_HyperX_367522_RUBY,_Gaming_Chair,_BlackRed__4__888.jpg",
+   "sr": true,
+   "product": "HyperX 367522 RUBY"
+  },
+  {
+   "file": "07-kompiuteris-natsilebi",
+   "label": "კომპიუტერის ნაწილები",
+   "url": "https://superi.ge/kompiuteris-natsilebi/",
+   "src": "https://superi.ge/images/detailed/40/1870929_inno3d-n507t3-16d7x-176068n-x3-oc-geforce-rtx-5070-16gb-gddr7-dlss4.webp",
+   "sr": false,
+   "product": "Inno3D GeForce RTX 5070 Ti X3 OC 16GB"
+  }
+ ]
+}
