@@ -64,7 +64,111 @@ CANON = {
     'arzum': 'Arzum', 'allibert': 'Allibert', 'lavor': 'Lavor', 'ariston': 'Ariston', 'zellmer': 'Zellmer',
     'tenda': 'Tenda', 'toorx': 'Toorx', 'evii': 'EVII', 'onvo': 'ONVO', 'garden star': 'Garden Star',
     'koopman': 'Koopman', 'thermex': 'Thermex', 'wadfow': 'WADFOW', 'sokany': 'Sokany', 'urevo ': 'UREVO',
-    'leo': 'LEO', 'oz': 'Oz', 'group limited': '', 'nothing phone': 'Nothing', 'ud': 'UD', 'karma': 'Karma', 'hotpoint': 'Hotpoint', 'ariston thermo': 'Ariston',
+    'leo': 'LEO', 'oz': 'Oz', 'group limited': '', 'nothing phone': 'Nothing',
+    'snaige': 'Snaige',
+    'amica': 'Amica',
+    'wmf': 'WMF',
+    'kodak': 'Kodak',
+    'd-link': 'D-Link',
+    'unitek': 'Unitek',
+    'mdv': 'MDV',
+    'varmilo': 'Varmilo',
+    'lambert': 'Lambert',
+    'eca': 'ECA',
+    'parex': 'Parex',
+    'aquaverso': 'AquaVerso',
+    'topstrong': 'Topstrong',
+    "li'l woodzeez": "Li'l Woodzeez",
+    'driven': 'Driven',
+    'foxy dry': 'Foxydry',
+    'foxydry': 'Foxydry',
+    'screechers wild': 'Screechers Wild',
+    'squirrel': 'Squirrel',
+    'hotelline': 'Hotelline',
+    'edifier': 'Edifier',
+    'runo': 'Runo',
+    'ttec': 'ttec',
+    'hansa': 'Hansa',
+    'steelseries': 'SteelSeries',
+    'mchose': 'MCHOSE',
+    'terra': 'Terra',
+    'infinity nado': 'Infinity Nado',
+    'topmaster': 'Topmaster',
+    'magplayer': 'Magplayer',
+    'gadget': 'Gadget',
+    'dobe': 'DOBE',
+    'b.toys': 'B. toys',
+    'b. toys': 'B. toys',
+    'lori': 'Lori',
+    'vievo': 'VIEVO',
+    'rev&roll': 'Rev&Roll',
+    'arya': 'Arya',
+    'ballu': 'Ballu',
+    'weofly': 'Weofly',
+    'tesy': 'Tesy',
+    'italtherm': 'Italtherm',
+    'ducky': 'Ducky',
+    'goldstar': 'Goldstar',
+    'veito': 'Veito',
+    'monkart': 'Monkart',
+    'truper': 'Truper',
+    'shuft': 'Shuft',
+    'potensic': 'Potensic',
+    'sollex': 'Sollex',
+    'aeno': 'AENO',
+    'weibopro': 'WEIBOPRO',
+    'baymak': 'Baymak',
+    'eurogold': 'EuroGold',
+    'xtrfy': 'Xtrfy',
+    'dream machines': 'Dream Machines',
+    'gazillion': 'Gazillion',
+    'janod': 'Janod',
+    'prity': 'Prity',
+    'mova': 'MOVA',
+    'andaseat': 'AndaSeat',
+    'zanussi': 'Zanussi',
+    'ferroli': 'Ferroli',
+    'louis pascal': 'Louis Pascal',
+    'goliath': 'Goliath',
+    'shilz': 'SHILZ',
+    'toolmak': 'Toolmak',
+    'biostar': 'BIOSTAR',
+    'cron': 'Cron',
+    'sime': 'Sime',
+    'airfel': 'Airfel',
+    'decorall': 'Decorall',
+    'metabo': 'Metabo',
+    'sarayli': 'Sarayli',
+    'zotac': 'ZOTAC',
+    'tineco': 'Tineco',
+    'mizudo': 'Mizudo',
+    'jabra': 'Jabra',
+    'cemsan': 'Cemsan',
+    'baxi': 'BAXI',
+    'goki': 'goki',
+    'kieslect': 'Kieslect',
+    'viper': 'Viper',
+    'deli': 'Deli',
+    'pretul': 'Pretul',
+    'stanley': 'Stanley',
+    'termica': 'Termica',
+    'cansus': 'Cansus',
+    'maysa': 'Maysa',
+    'silverlit': 'Silverlit',
+    'lexmark': 'Lexmark',
+    'jedel': 'Jedel',
+    'kratki': 'Kratki',
+    'koss': 'Koss',
+    'ricoh': 'Ricoh',
+    'viessmann': 'Viessmann',
+    'make it real': 'Make It Real',
+    'same toy': 'Same Toy',
+    'super wings': 'Super Wings',
+    'zeno': 'Zeno',
+    'macro': 'Macro',
+    'ea sports': 'EA',
+    'la sommeliere': 'La Sommelière',
+    'home line': 'Home Line', 'ud': 'UD', 'karma': 'Karma', 'hotpoint': 'Hotpoint', 'ariston thermo': 'Ariston',
     'demir dokum': 'Demirdöküm', 'nobo': 'Nobo', 'royal kludge': 'Royal Kludge', 'bort': 'BORT',
     'sigma': 'Sigma', 'iffalcon': 'iFFALCON', 'leader': 'Leader', 'dibea': 'Dibea', 'uwant': 'Uwant',
     'hobot': 'HOBOT', 'airforce': 'Airforce', 'fanon': 'Fanon', 'xtrike': 'XTRIKE ME', 'gravastar': 'GravaStar',
@@ -115,17 +219,48 @@ def build_brand_index(names):
     return out
 
 
+# video games: publisher is the brand
+GAMES = [
+    (r'last of us|horizon|gran turismo|uncharted|god of war|spider-man|ratchet|astro bot|ghost of|demon.s souls|returnal|death stranding', 'Sony'),
+    (r"assassin.?s creed|far cry|watch dogs|prince of persia|just dance", 'Ubisoft'),
+    (r'\bgta\b|grand theft auto|red dead', 'Rockstar Games'), (r'mafia|nba 2k|borderlands|wwe 2k', '2K'),
+    (r'need for speed|ea sports|\bfc ?2\d\b|\bufc\b|battlefield|\bfifa\b|it takes two|star wars jedi', 'EA'),
+    (r'witcher|cyberpunk', 'CD PROJEKT RED'), (r'hogwarts|mortal kombat|lego batman|suicide squad', 'Warner Bros. Games'),
+    (r'resident evil|street fighter|monster hunter|devil may cry', 'Capcom'), (r'hitman', 'IO Interactive'),
+    (r'plague tale', 'Focus Entertainment'), (r'hot wheels unleashed|motogp|ride \d', 'Milestone'),
+    (r'minecraft', 'Mojang'), (r'elden ring|tekken|dragon ball|ace combat', 'Bandai Namco'),
+    (r'final fantasy|kingdom hearts', 'Square Enix'), (r'call of duty|crash bandicoot|tony hawk', 'Activision'),
+    (r'mario|zelda|pok[eé]mon|kirby|splatoon', 'Nintendo'),
+]
+_GAMES = [(re.compile(p, re.I), b) for p, b in GAMES]
+_GAME_CTX = re.compile(r'\bgame\b|\bps[45]\b|playstation [45]|nintendo switch|xbox|^თამაში', re.I)
+_GENERIC_LEAD = re.compile(r'^(?:(?:bluetooth|usb|wi-?fi|mesh|adsl2\+|all[\s-]*in[\s-]*one|[345]g|lte|type-c|rgb)[\s,/-]*)+', re.I)
+WINDOW = 14
+
+
 def detect_from_title(title, index):
-    lat = re.search(r'[A-Za-z]', title)
+    if _GAME_CTX.search(title):
+        for rx, b in _GAMES:
+            if rx.search(title):
+                return b
+    lat = re.search(r'[A-Za-z0-9]*[A-Za-z]', title)
     if not lat:
         return ''
+    start = lat.start()
+    # skip generic Latin words that often precede the brand ("Bluetooth მაუსი HP ...")
+    rest = title[start:]
+    g = _GENERIC_LEAD.match(rest)
+    if g:
+        m2 = re.search(r'[A-Za-z]', rest[g.end():])
+        if m2:
+            start = start + g.end() + m2.start()
     for rx, b in _LINE:
         m = rx.search(title)
-        if m and m.start() - lat.start() <= 12:
+        if m and abs(m.start() - start) <= WINDOW:
             return b
     best = None
     for rx, b in index:
-        m = rx.search(title)
-        if m and m.start() - lat.start() <= 12 and (best is None or m.start() < best[0]):
+        m = rx.search(title, max(0, start - 1))
+        if m and m.start() - start <= WINDOW and (best is None or m.start() < best[0]):
             best = (m.start(), b)
     return best[1] if best else ''

@@ -50,7 +50,9 @@ TYPE_WORDS = ('ვენტილატორი', 'სკუტერი', 'პ
               'საწური', 'წვენსაწური', 'ჩოფერი', 'კომბაინი', 'აპარატი', 'რადიატორი', 'ყურსასმენი', 'ტელეფონი',
               'მაუსი', 'კლავიატურა', 'მონიტორი', 'ნოუთბუქი', 'პროექტორი', 'კომპრესორი', 'გაზონსაკრეჭი',
               'საათი', 'ტაბლეტი', 'მტვერსასრუტი', 'დამტენი', 'ტელევიზორი', 'როუტერი', 'მაცივარი', 'ჩანთა',
-              'კომპიუტერი', 'სისტემა')
+              'კომპიუტერი', 'სისტემა', 'ლეპტოპი', 'ტაბი', 'ჩაიდანი', 'მიქსერი', 'ბლენდერი', 'ტოსტერი',
+              'ბილიკი', 'სტაილერი', 'კონდიციონერი', 'პროცესორი', 'მანქანა', 'გამათბობელი', 'გამაცხელებელი',
+              'სეტი', 'საჭრელი')
 
 # category leaf -> Georgian type to prefix when the title has no Georgian at all
 PREFIX_TYPE = {
@@ -104,7 +106,7 @@ def clean_title(raw, leaf, gtin):
             t = typ + ' ' + t
     elif not GEO.match(t):
         # Latin-first title with a trailing Georgian product type -> move type to the front
-        m = re.match(r'^(.*?[A-Za-z0-9\)\]"”\'’.%+])\s+([Ⴀ-ჿ][Ⴀ-ჿ\s\-]*)$', t)
+        m = re.match(r'^(.*?[A-Za-z0-9\)\]"”\'’.%+]),?\s+([Ⴀ-ჿ][Ⴀ-ჿ\s\-]*)$', t)
         if m and any(w in m.group(2) for w in TYPE_WORDS):
             t = m.group(2).strip() + ' ' + m.group(1).strip()
     t = re.sub(r'\s+', ' ', t).strip()
@@ -368,6 +370,13 @@ for r in rows:
         if u != main_img and u not in extra:
             extra.append(u)
     extra = extra[:10]
+    if not main_img:
+        if extra:
+            main_img, extra = extra[0], extra[1:]
+        else:
+            skipped.append({'Product code': code, 'Product name': name, 'Product URL': url,
+                            'მიზეზი': 'სურათი არ აქვს'})
+            continue
     if main_img in IMGBAD:
         alt = [u for u in extra if u not in IMGBAD]
         if alt:
