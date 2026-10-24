@@ -5,64 +5,58 @@
   {
    "file": "01-monoblokebi-all-in-one",
    "label": "მონობლოკები All in One",
-   "url": "https://superi.ge/all-in-one/",
-   "src": "https://superi.ge/images/detailed/29/1-ideacentre-aio-24irh9-ct1-03-v1-600.webp",
-   "sr": true,
-   "product": "Lenovo IdeaCentre AIO 24IRH9"
+   "url": "https://superi.ge/monoblokebi/",
+   "src": "https://superi.ge/images/detailed/89/monobloki-lenovo-ideacentre-aio-24irh9-f0hn011uru-1.webp",
+   "sr": false,
+   "product": "მონობლოკი Lenovo IdeaCentre AIO 24IRH9 23.8'' FHD F0HN011URU Cloud Gre"
   },
   {
    "file": "02-noutbuqebi",
    "label": "ნოუთბუქები",
    "url": "https://superi.ge/noutbuqebi/",
-   "src": "https://superi.ge/images/detailed/59/BK9Y9EA_4_optimized.png",
+   "src": "https://superi.ge/images/detailed/40/2186536.webp",
    "sr": false,
-   "product": "HP OmniBook 5 16 (Sky Blue)"
+   "product": "ნოუთბუქი ACER Aspire 14 AI A14-52M 14\" WUXGA OLED NX.JFVER.005"
   },
   {
    "file": "03-monitorebi",
    "label": "მონიტორები",
-   "url": "https://superi.ge/monitor/",
-   "src": "https://superi.ge/images/detailed/31/71d_syB870L._AC_SL1500_.webp",
+   "url": "https://superi.ge/monitorebi/",
+   "src": "https://superi.ge/images/detailed/57/product-001-01_mrnq-sb.webp",
    "sr": false,
-   "product": "Samsung ViewFinity S9 27\" 5K (LS27C902PAIXCI)",
-   "crop": [
-    0.215,
-    0,
-    1,
-    1
-   ]
+   "product": "მონიტორი HP Series 7 Pro 732xk 31.5\" 4K (B7JM6AA), ვერცხლისფერი"
   },
   {
    "file": "04-konsolebi-da-aqsesuarebi",
    "label": "კონსოლები და აქსესუარები",
    "url": "https://superi.ge/konsolebi-da-aqsesuarebi/",
-   "src": "https://superi.ge/images/detailed/13/117075_2.png",
+   "src": "https://superi.ge/images/detailed/64/usadeno-kontroleri-playstation-0711719022350-1.webp",
    "sr": false,
-   "product": "Microsoft Xbox Series S 512GB (White)"
+   "product": "უსადენო კონტროლერი PlayStation DualSense PS5 White"
   },
   {
    "file": "05-kompiuteris-aqsesuarebi",
    "label": "კომპიუტერის აქსესუარები",
    "url": "https://superi.ge/kompiuteris-aqsesuarebi/",
-   "src": "https://superi.ge/images/detailed/19/71keUmIzAZL._AC_SL1500_.jpg",
+   "src": "https://superi.ge/images/detailed/74/usadeno-klaviatura-da-mausi-2e-mk430-2e-mk430wbgr-1.webp",
    "sr": false,
-   "product": "Logitech K360"
+   "product": "უსადენო კლავიატურა და მაუსი 2E MK430, ნაცრისფერი-შავი, EN/UA/RU (2E-MK"
   },
   {
    "file": "06-gaming-magida-savardzlebi",
    "label": "GAMING მაგიდა-სავარძლები",
-   "url": "https://superi.ge/gaming/",
-   "src": "https://superi.ge/images/detailed/23/Gaming_სავარძელლი_HyperX_367522_RUBY,_Gaming_Chair,_BlackRed__4__888.jpg",
-   "sr": true,
-   "product": "HyperX 367522 RUBY"
+   "url": "https://superi.ge/geiming-magida-savardzlebi/",
+   "src": "https://superi.ge/images/detailed/66/razer-gaming-chair-enki-x-black-green-1.webp",
+   "sr": false,
+   "product": "გეიმინგ სავარძელი Razer Gaming Chair Enki X Black/Green"
   },
   {
    "file": "07-kompiuteris-natsilebi",
    "label": "კომპიუტერის ნაწილები",
    "url": "https://superi.ge/kompiuteris-natsilebi/",
-   "src": "https://superi.ge/images/detailed/40/1870929_inno3d-n507t3-16d7x-176068n-x3-oc-geforce-rtx-5070-16gb-gddr7-dlss4.webp",
+   "src": "https://superi.ge/images/detailed/79/video-barati-msi-12gb-gddr7-geforce-rtx-5070-1.webp",
    "sr": false,
-   "product": "Inno3D GeForce RTX 5070 Ti X3 OC 16GB"
+   "product": "ვიდეო ბარათი MSI GeForce RTX 5070 12GB GDDR7 VENTUS 2X OC (912-V532-00"
   }
  ]
 }
