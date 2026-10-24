@@ -12,7 +12,7 @@ alta.ge-ს სტილში, ყველა კატეგორიის�
 
 | კატეგორია | საქაღალდე |
 |---|---|
-| [სამზარეულოს ტექნიკა](https://superi.ge/samzarelos-teqnika/) | [samzareulos-teqnika](samzareulos-teqnika/) |
+| [სამზარეულოს ტექნიკა](https://superi.ge/samzarelos-teqnika/) | [samzareulos-teqnika](samzareulos-teqnika/), [samzareulos-teqnika-damatebiti](samzareulos-teqnika-damatebiti/) |
 | [ტელეფონები, ტაბლეტები](https://superi.ge/telefonebi-tabletebi/) | [telefonebi-tabletebi](telefonebi-tabletebi/) |
 | [TV-ფოტო-ვიდეო](https://superi.ge/tv/) | [tv-foto-video](tv-foto-video/) |
 | [ტექნიკა](https://superi.ge/teqnika/) (მთავარი კატეგორიები) | [teqnika](teqnika/) |

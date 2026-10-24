@@ -1,0 +1,22 @@
+{
+ "category": "სამზარეულოს ტექნიკა (დამატებითი ქვეკატეგორიები)",
+ "category_url": "https://superi.ge/samzarelos-teqnika/",
+ "items": [
+  {
+   "file": "01-yavis-safqvavebi",
+   "label": "ყავის საფქვავები",
+   "url": "https://superi.ge/yavis-safqvavebi/",
+   "src": "https://superi.ge/images/detailed/91/qavis-sapkvavi-braun-freshset-kg7070-1.webp",
+   "sr": false,
+   "product": "ყავის საფქვავი Braun FreshSet KG7070, ვერცხლისფერი"
+  },
+  {
+   "file": "02-eleqtro-grilebi",
+   "label": "ელექტრო გრილები",
+   "url": "https://superi.ge/eleqtro-grilebi/",
+   "src": "https://superi.ge/images/detailed/91/grili-philips-series-5000-hd6301-90-1.webp",
+   "sr": false,
+   "product": "გრილი Philips Series 5000 HD6301/90"
+  }
+ ]
+}
