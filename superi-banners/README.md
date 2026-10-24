@@ -21,6 +21,7 @@ alta.ge-ს სტილში, ყველა კატეგორიის�
 | სეიფები (3D რენდერი — საიტზე სეიფის ფოტო არ არის) | [seifebi](seifebi/) |
 | [მაუსები](https://superi.ge/mausebi/) | [mausebi](mausebi/) |
 | [ნოუთბუქები, კომპიუტერები, მონიტორები](https://superi.ge/noutbuqebi-kompiuterebi-monitorebi/) | [noutbuqebi-kompiuterebi-monitorebi](noutbuqebi-kompiuterebi-monitorebi/) |
+| [დინამიკები](https://superi.ge/dinamikebi/) | [dinamikebi](dinamikebi/) |
 
 ## ბადე და hover: 6 ბანერი ერთ რიგში, ალტასავით
 
