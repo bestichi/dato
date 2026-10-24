@@ -1,0 +1,75 @@
+{
+ "category": "წვრილი საყოფაცხოვრებო ტექნიკა",
+ "category_url": "https://superi.ge/tsvrili-sakopatskhovrebo-teqnika/",
+ "items": [
+  {
+   "file": "01-sastsorebi",
+   "label": "სასწორები",
+   "url": "https://superi.ge/sastsorebi/",
+   "src": "https://superi.ge/images/detailed/70/xiaomi-smart-scale-s200-dark-grey-1.webp",
+   "sr": false,
+   "product": "ჭკვიანი სასწორი Xiaomi Smart Scale S200 Dark grey"
+  },
+  {
+   "file": "02-mtversasrutebi",
+   "label": "მტვერსასრუტები",
+   "url": "https://superi.ge/mtversasrutebi/",
+   "src": "https://superi.ge/images/detailed/58/product-001-01_ss5m-v1.webp",
+   "sr": false,
+   "product": "მტვერსასრუტი HITACHI PV-XHE4PLMBCEU",
+   "rotate": -28
+  },
+  {
+   "file": "03-ortqlit-satsmendi-aparatebi",
+   "label": "ორთქლით საწმენდი აპარატები",
+   "url": "https://superi.ge/ortqlit-satsmendi-aparatebi/",
+   "src": "https://superi.ge/images/detailed/87/ortklis-satsmendi-aparati-sc-3-deluxe-easyfix-1.webp",
+   "sr": true,
+   "product": "ორთქლის საწმენდი აპარატი KARCHER SC 3 Deluxe EasyFix",
+   "crop": [
+    0.27,
+    0,
+    0.7,
+    0.42
+   ]
+  },
+  {
+   "file": "04-minis-satsmendi-aparatebi",
+   "label": "მინის საწმენდი აპარატები",
+   "url": "https://superi.ge/minis-satsmendi-aparatebi/",
+   "src": "https://superi.ge/images/detailed/87/minis-satsmendi-karcher-wv-2-plus-n-1.webp",
+   "sr": false,
+   "product": "მინის საწმენდი KARCHER WV 2 Plus N",
+   "crop": [
+    0.36,
+    0.0,
+    0.885,
+    0.77
+   ],
+   "erase": [
+    [
+     0,
+     0.165,
+     0.528,
+     1
+    ]
+   ]
+  },
+  {
+   "file": "05-tmis-uto-staileri",
+   "label": "თმის უთო/სტაილერი",
+   "url": "https://superi.ge/tmis-utoebi-da-stailerebi/",
+   "src": "https://superi.ge/images/detailed/32/Screenshot_2024-02-26_at_20.42.12.webp",
+   "sr": true,
+   "product": "თმის გასასწორებელი სტაილერი Dyson Airstrait™ HT01 straightener Prussia"
+  },
+  {
+   "file": "06-uto",
+   "label": "უთო",
+   "url": "https://superi.ge/utoebi/",
+   "src": "https://superi.ge/images/detailed/88/uto-electrolux-e5si2-6og-1.webp",
+   "sr": false,
+   "product": "უთო Electrolux E5SI2-6OG"
+  }
+ ]
+}

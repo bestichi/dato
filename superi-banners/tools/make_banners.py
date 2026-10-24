@@ -19,6 +19,8 @@ banners.json:
   "solid": true (fill the whole outline, for products whose body is nearly the background colour).
   "src" may also be a file next to banners.json; a PNG with transparency is used as its own mask.
   "crop": [left, top, right, bottom] fractions of the photo, to cut off a badge or a second product.
+  "rotate": degrees counter-clockwise, to lean a tall thin product so it fills the card.
+  "erase": [[left, top, right, bottom], ...] fractions of the photo painted white first (accessories around the product).
   Several products in one banner: replace "src"/"sr" with "parts", drawn back to front:
     "parts": [{"src": "...", "sr": false, "h": 1.0, "x": 0.0, "y": 0.0}, ...]
   h = height, x = horizontal centre, y = bottom above the floor; all in units of the same length.
@@ -175,7 +177,7 @@ def render(prod, out_path, scale=1.0, dy=0):
     return nw, nh, k
 
 
-def prepare(url, sr, work, crop=None):
+def prepare(url, sr, work, crop=None, erase=None):
     """Download (+ optional crop and super-resolution) and segment one photo; returns (photo, mask) paths.
     crop = [left, top, right, bottom] as fractions of the photo, to cut off badges or a second product."""
     work.mkdir(parents=True, exist_ok=True)
@@ -190,7 +192,7 @@ def prepare(url, sr, work, crop=None):
     else:
         # the cache folder is per banner: if its photo URL changed, drop the old photo, upscale and mask
         stamp = work / 'source.txt'
-        key = f'{url}\nsr={bool(sr)}\ncrop={crop}'
+        key = f'{url}\nsr={bool(sr)}\ncrop={crop}\nerase={erase}'
         if not stamp.exists() or stamp.read_text() != key:
             for old in work.iterdir():
                 old.unlink()
@@ -198,12 +200,16 @@ def prepare(url, sr, work, crop=None):
         src = work / ('src' + (Path(urllib.parse.urlparse(url).path).suffix or '.img'))
         if not src.exists():
             fetch(url, src)
-        if crop:
+        if crop or erase:
             cropped = work / 'crop.png'
             if not cropped.exists():
-                im = Image.open(src)
+                im = load_rgb(src)
                 w, h = im.size
-                im.crop((round(crop[0] * w), round(crop[1] * h), round(crop[2] * w), round(crop[3] * h))).save(cropped)
+                for l, t, r, b in erase or []:
+                    # paint accessories next to the product white, so the cut-out ignores them
+                    ImageDraw.Draw(im).rectangle((round(l * w), round(t * h), round(r * w), round(b * h)), fill=(255, 255, 255))
+                c = crop or [0, 0, 1, 1]
+                im.crop((round(c[0] * w), round(c[1] * h), round(c[2] * w), round(c[3] * h))).save(cropped)
             src = cropped
     if sr:
         up = work / 'sr.png'
@@ -265,8 +271,14 @@ def main():
         if 'parts' in it:
             prod = compose_group(it['parts'])
         else:
-            prod = cutout(*prepare(it['src'], it.get('sr', False), CACHE / 'work' / out_dir.name / name, it.get('crop')),
+            prod = cutout(*prepare(it['src'], it.get('sr', False), CACHE / 'work' / out_dir.name / name, it.get('crop'), it.get('erase')),
                           it.get('solid', False))
+        if it.get('rotate'):
+            # lean a tall, thin product (e.g. a stick vacuum) so it fills the square card better
+            prod = prod.rotate(it['rotate'], resample=Image.Resampling.BICUBIC, expand=True)
+            al = np.asarray(prod.split()[3])
+            ys, xs = np.where(al > 20)
+            prod = prod.crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
         nw, nh, k = render(prod, out_dir / f'{name}.png', it.get('scale', 1.0), it.get('dy', 0))
         print(f'{name}.png  product {nw}x{nh}px  source x{k:.2f}' + ('  (upscaled, consider "sr": true)' if k > 1.05 else ''),
               flush=True)

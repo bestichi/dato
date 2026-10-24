@@ -41,3 +41,4 @@ NODE_PATH=$(npm root -g) node preview_offline.js site-snapshot/category-page.htm
 
 Photo downloads use the plain `Mozilla/5.0` user agent: a full Chrome UA from curl gets a 403 from the same check.
 `"crop": [left, top, right, bottom]` (fractions) trims a photo before the cut-out, e.g. to drop a badge.
+`"erase": [[l, t, r, b], ...]` paints accessories next to the product white before the cut-out; `"rotate"` (degrees) leans a tall thin product so it fills the card.

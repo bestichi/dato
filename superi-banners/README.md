@@ -22,6 +22,7 @@ alta.ge-ს სტილში, ყველა კატეგორიის�
 | [მაუსები](https://superi.ge/mausebi/) | [mausebi](mausebi/) |
 | [ნოუთბუქები, კომპიუტერები, მონიტორები](https://superi.ge/noutbuqebi-kompiuterebi-monitorebi/) | [noutbuqebi-kompiuterebi-monitorebi](noutbuqebi-kompiuterebi-monitorebi/) |
 | [დინამიკები](https://superi.ge/dinamikebi/) | [dinamikebi](dinamikebi/) |
+| [წვრილი საყოფაცხოვრებო ტექნიკა](https://superi.ge/tsvrili-sakopatskhovrebo-teqnika/) | [tsvrili-sakopatskhovrebo-teqnika](tsvrili-sakopatskhovrebo-teqnika/) |
 
 ## ბადე და hover: 6 ბანერი ერთ რიგში, ალტასავით
 
