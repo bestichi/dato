@@ -1,0 +1,55 @@
+{
+ "category": "სილამაზე და მოვლა",
+ "category_url": "https://superi.ge/silamaze-da-movla/",
+ "items": [
+  {
+   "file": "01-tmis-fenebi",
+   "label": "თმის ფენები",
+   "url": "https://superi.ge/tmis-fenebi/",
+   "src": "https://superi.ge/images/detailed/90/peni-philips-series-8000-adriatikuli-bhd839-00-1.webp",
+   "sr": false,
+   "product": "ფენი Philips Series 8000 BHD839/00, ადრიატიკული ლურჯი",
+   "erase": [
+    [
+     0.62,
+     0.2,
+     0.9,
+     0.46
+    ]
+   ]
+  },
+  {
+   "file": "03-tmisa-da-tsveris-sakrechebi",
+   "label": "თმისა და წვერის საკრეჭები",
+   "url": "https://superi.ge/tmisa-da-tsveris-sakrechebi/",
+   "src": "https://superi.ge/images/detailed/86/tmis-sakrechi-panasonic-shavi-er-gp21-k820-1.webp",
+   "sr": false,
+   "product": "თმის საკრეჭი Panasonic ER-GP21-K820, შავი"
+  },
+  {
+   "file": "04-tsveris-saparsebi",
+   "label": "წვერის საპარსები",
+   "url": "https://superi.ge/tsveris-saparsebi/",
+   "src": "https://superi.ge/images/detailed/70/xiaomi-mi-electric-shaver-s700-black-1.webp",
+   "sr": false,
+   "product": "წვერის საპარსი Xiaomi Mi Electric Shaver S700 Black"
+  },
+  {
+   "file": "05-epilatorebi",
+   "label": "ეპილატორები",
+   "url": "https://superi.ge/epilatorebi/",
+   "src": "https://superi.ge/images/detailed/92/epilatori-rowenta-easy-touch-shavi-ep1119f0-1.webp",
+   "sr": false,
+   "product": "ეპილატორი Rowenta Easy Touch EP1119F0, შავი / ოქროსფერი"
+  },
+  {
+   "file": "06-eleqtro-kbilis-jagrisebi",
+   "label": "ელექტრო კბილის ჯაგრისები",
+   "url": "https://superi.ge/eleqtro-kbilis-jagrisebi/",
+   "src": "https://superi.ge/images/detailed/91/elektro-kbilis-jagrisi-philips-sonicare-hx3792-11-1.webp",
+   "sr": false,
+   "product": "ელექტრო კბილის ჯაგრისი Philips Sonicare Advanced Clean HX3792/11, შავი",
+   "rotate": -32
+  }
+ ]
+}
