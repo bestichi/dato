@@ -1,0 +1,46 @@
+{
+ "category": "საოფისე და ქსელური მოწყობილობები",
+ "category_url": "https://superi.ge/saopise-da-qseluri-motskobilobebi/",
+ "items": [
+  {
+   "file": "01-printerebi",
+   "label": "პრინტერები და მრავალფუნქციური მოწყობილობები",
+   "url": "https://superi.ge/printerebi/",
+   "src": "https://superi.ge/images/detailed/70/canon-pixma-g3470-white-5805c029aa-1.webp",
+   "sr": false,
+   "product": "პრინტერი Canon PIXMA G3470 (5805C029AA) White"
+  },
+  {
+   "file": "02-proeqtorebi-da-aqsesuarebi",
+   "label": "პროექტორები და აქსესუარები",
+   "url": "https://superi.ge/proeqtorebi-da-aqsesuarebi/",
+   "src": "https://superi.ge/images/detailed/61/xiaomi-smart-projector-l1-black-1.webp",
+   "sr": false,
+   "product": "პროექტორი Xiaomi Smart Projector L1 Black"
+  },
+  {
+   "file": "03-kartrijebi-saghebavebi-qaghaldi",
+   "label": "კარტრიჯები, საღებავები, ქაღალდი",
+   "url": "https://superi.ge/kartrijebi-saghebavebi-qaghaldi/",
+   "src": "https://superi.ge/images/detailed/59/toner-kartriji-printermayin-ce505x-cf280x-1.webp",
+   "sr": false,
+   "product": "ტონერ კარტრიჯი PrinterMayin CE505X/CF280X"
+  },
+  {
+   "file": "04-routerebi",
+   "label": "როუტერები",
+   "url": "https://superi.ge/routerebi/",
+   "src": "https://superi.ge/images/detailed/56/4c351d0d-877f-45a7-905b-e6ba0ee97e78_2wgu-hh.png",
+   "sr": false,
+   "product": "როუტერი TP-Link Archer BE230 Dual-Band Wi-Fi 7 Router"
+  },
+  {
+   "file": "05-utsyveti-kvebis-tsyaroebi-ups",
+   "label": "უწყვეტი კვების წყაროები (UPS)",
+   "url": "https://superi.ge/utsyveti-kvebis-tsyaroebi-ups/",
+   "src": "https://superi.ge/images/detailed/90/utsqveti-kvebis-tsqaro-svc-650-va-360-w-line-v-650-1.webp",
+   "sr": false,
+   "product": "უწყვეტი კვების წყარო SVC V-650, 650 VA / 360 W, Line-Interactive, AVR"
+  }
+ ]
+}
