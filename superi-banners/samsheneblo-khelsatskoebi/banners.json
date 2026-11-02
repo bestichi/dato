@@ -1,0 +1,158 @@
+{
+ "category": "სამშენებლო ხელსაწყოები",
+ "category_url": "https://superi.ge/samsheneblo-khelsatskoebi/",
+ "items": [
+  {
+   "file": "01-generatorebi",
+   "label": "გენერატორები",
+   "url": "https://superi.ge/generatorebi/",
+   "src": "https://superi.ge/images/detailed/59/generatori-invertoruli-konner-sohnen-ks-2100i-s-1.webp",
+   "sr": false,
+   "product": "გენერატორი ინვერტორული Könner & Söhnen KS 2100i S"
+  },
+  {
+   "file": "02-kompresorebi",
+   "label": "კომპრესორები",
+   "url": "https://superi.ge/kompresorebi/",
+   "src": "https://superi.ge/images/detailed/68/haeris-kompresori-basic-250-50-w-of-601535000-1.webp",
+   "sr": false,
+   "product": "ჰაერის კომპრესორი Metabo BASIC 250-50 W OF (50 ლ)"
+  },
+  {
+   "file": "03-kompresoris-aqsesuarebi",
+   "label": "კომპრესორის აქსესუარები",
+   "url": "https://superi.ge/kompresoris-aqsesuarebi/",
+   "src": "https://superi.ge/images/detailed/110/haeris-piltr-regulatori-ormagi-ronix-0-10-rh-6902-1.webp",
+   "sr": false,
+   "product": "ჰაერის ფილტრ-რეგულატორი ორმაგი Ronix RH-6902"
+  },
+  {
+   "file": "04-pnevmaturi-instrumentebi",
+   "label": "პნევმატური ინსტრუმენტები",
+   "url": "https://superi.ge/pnevmaturi-instrumentebi/",
+   "src": "https://superi.ge/images/detailed/110/pnevmaturi-dartqmiti-kanchis-gasaghebi-ra-1201-1.webp",
+   "sr": false,
+   "product": "პნევმატური დარტყმითი ქანჩის გასაღები Ronix RA-1201"
+  },
+  {
+   "file": "05-khelis-instrumentebi",
+   "label": "ხელის ინსტრუმენტები",
+   "url": "https://superi.ge/khelis-instrumentebi/",
+   "src": "https://superi.ge/images/detailed/88/kanchis-gasaghebis-nakrebi-topstrong-12-ts-235125-1.webp",
+   "sr": false,
+   "product": "ქანჩის გასაღების ნაკრები Topstrong 235125 (12 ც)"
+  },
+  {
+   "file": "06-shedughebis-aparatebi",
+   "label": "შედუღების აპარატები",
+   "url": "https://superi.ge/shedughebis-aparatebi/",
+   "src": "https://superi.ge/images/detailed/103/shedughebis-aparati-hugong-mma-estick-200-pfc-iii-1.webp",
+   "sr": false,
+   "product": "შედუღების აპარატი HUGONG ESTICK 200 PFC III"
+  },
+  {
+   "file": "07-kutkhsakhekhebi",
+   "label": "კუთხსახეხი",
+   "url": "https://superi.ge/kutkhsakhekhebi/",
+   "src": "https://superi.ge/images/detailed/106/akumulatoruli-kutkhsakhekhi-metabo-125-wvb-18-lt-1.webp",
+   "sr": false,
+   "product": "აკუმულატორული კუთხსახეხი Metabo WVB 18 LT, 125 მმ"
+  },
+  {
+   "file": "08-drelebi",
+   "label": "დრელები",
+   "url": "https://superi.ge/drelebi/",
+   "src": "https://superi.ge/images/detailed/110/dreli-elektro-ronix-420-w-10-mm-2115-1.webp",
+   "sr": false,
+   "product": "დრელი ელექტრო Ronix 2115, 420 W"
+  },
+  {
+   "file": "09-sakhrakhnisebi",
+   "label": "სახრახნისები",
+   "url": "https://superi.ge/sakhrakhnisebi/",
+   "src": "https://superi.ge/images/detailed/111/sakhrakhnisi-akumulatoruli-dewalt-18-dcd708s2t-qw-1.webp",
+   "sr": false,
+   "product": "სახრახნისი აკუმულატორული DeWALT DCD708S2T-QW, 18 V"
+  },
+  {
+   "file": "10-instrumentebis-sakharji-masalebi",
+   "label": "ინსტრუმენტების სახარჯი მასალები",
+   "url": "https://superi.ge/instrumentebis-sakharji-masalebi/",
+   "src": "https://superi.ge/images/detailed/102/sakhekhi-diski-wokin-115-mm-grit-40-775804-1.webp",
+   "sr": false,
+   "product": "სახეხი ფურცლოვანი დისკი WOKIN 115 მმ",
+   "erase": [
+    [
+     0,
+     0,
+     1,
+     0.15
+    ]
+   ]
+  },
+  {
+   "file": "11-elektro-khelsatsyoebi",
+   "label": "ელექტრო ხელსაწყოები",
+   "url": "https://superi.ge/elektro-khelsatsyoebi/",
+   "src": "https://superi.ge/images/detailed/102/elektro-saprialebeli-wokin-ekstsentrikuli-788305-1.webp",
+   "sr": false,
+   "product": "ექსცენტრიკული საპრიალებელი Wokin 788305, 125 მმ",
+   "erase": [
+    [
+     0,
+     0,
+     1,
+     0.22
+    ]
+   ]
+  },
+  {
+   "file": "12-portatuli-eleqtrosadgurebi",
+   "label": "პორტატული ელექტროსადგურები",
+   "url": "https://superi.ge/portatuli-eleqtrosadgurebi/",
+   "src": "https://superi.ge/images/detailed/28/ecoflow-us-ecoflow-river-2-max-portable-power-station-30042740555849_2000x.png",
+   "sr": false,
+   "product": "პორტატული ელექტროსადგური EcoFlow River 2 Max"
+  },
+  {
+   "file": "13-spetstansatsmeli-da-usafrtkhoeba",
+   "label": "სპეცტანსაცმელი და უსაფრთხოება",
+   "url": "https://superi.ge/spetstansatsmeli-da-usafrtkhoeba/",
+   "src": "https://superi.ge/images/detailed/102/damtsavi-satvale-wokin-regulirebadi-455000-1.webp",
+   "sr": false,
+   "product": "დამცავი სათვალე WOKIN 455000",
+   "erase": [
+    [
+     0,
+     0,
+     1,
+     0.3
+    ]
+   ]
+  },
+  {
+   "file": "14-kherkhebi",
+   "label": "ხერხები",
+   "url": "https://superi.ge/kherkhebi/",
+   "src": "https://superi.ge/images/detailed/107/usadeno-betsva-kherkhi-ronix-20-v-2-2-ah-8608-1.webp",
+   "sr": false,
+   "product": "უსადენო ბეწვა ხერხი Ronix 8608, 20 V"
+  },
+  {
+   "file": "15-kibeebi-da-urikebi",
+   "label": "კიბეები და ურიკები",
+   "url": "https://superi.ge/kibeebi-da-urikebi/",
+   "src": "https://superi.ge/images/detailed/109/kibe-sarayli-metalis-4-sapekhuri-practical-4-1.webp",
+   "sr": false,
+   "product": "კიბე SARAYLI Practical 4, 4 საფეხური"
+  },
+  {
+   "file": "16-farnebi-da-samushao-naturebi",
+   "label": "ფარნები და სამუშაო ნათურები",
+   "url": "https://superi.ge/farnebi-da-samushao-naturebi/",
+   "src": "https://superi.ge/images/detailed/103/salashkro-parani-elementebze-3-aa-2e-plbl3aaf-1.webp",
+   "sr": false,
+   "product": "სალაშქრო ფარანი 2E PLBL3AAF, დასაკეცი, 200 ლმ"
+  }
+ ]
+}

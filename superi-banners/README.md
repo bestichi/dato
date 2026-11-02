@@ -25,6 +25,7 @@ alta.ge-ს სტილში, ყველა კატეგორიის�
 | [წვრილი საყოფაცხოვრებო ტექნიკა](https://superi.ge/tsvrili-sakopatskhovrebo-teqnika/) | [tsvrili-sakopatskhovrebo-teqnika](tsvrili-sakopatskhovrebo-teqnika/) |
 | [საოფისე და ქსელური მოწყობილობები](https://superi.ge/saopise-da-qseluri-motskobilobebi/) | [saopise-da-qseluri-motskobilobebi](saopise-da-qseluri-motskobilobebi/) |
 | [სილამაზე და მოვლა](https://superi.ge/silamaze-da-movla/) | [silamaze-da-movla](silamaze-da-movla/) |
+| [სამშენებლო ხელსაწყოები](https://superi.ge/samsheneblo-khelsatskoebi/) | [samsheneblo-khelsatskoebi](samsheneblo-khelsatskoebi/) |
 
 ## ბადე და hover: 6 ბანერი ერთ რიგში, ალტასავით
 
