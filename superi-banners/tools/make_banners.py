@@ -21,6 +21,7 @@ banners.json:
   "crop": [left, top, right, bottom] fractions of the photo, to cut off a badge or a second product.
   "rotate": degrees counter-clockwise, to lean a tall thin product so it fills the card.
   "erase": [[left, top, right, bottom], ...] fractions of the photo painted white first (accessories around the product).
+  "exact_alpha": true uses a local render's alpha as is (soft glows), skipping the photo clean-up.
   Several products in one banner: replace "src"/"sr" with "parts", drawn back to front:
     "parts": [{"src": "...", "sr": false, "h": 1.0, "x": 0.0, "y": 0.0}, ...]
   h = height, x = horizontal centre, y = bottom above the floor; all in units of the same length.
@@ -270,6 +271,12 @@ def main():
             continue
         if 'parts' in it:
             prod = compose_group(it['parts'])
+        elif it.get('exact_alpha'):
+            # local studio render whose soft alpha matters (e.g. a light's glow): use it as rendered,
+            # without the photo clean-up (white unmixing, faint-alpha cut) that would leave a hard halo edge
+            prod = Image.open(BASE / it['src']).convert('RGBA')
+            ys, xs = np.where(np.asarray(prod.split()[3]) > 2)
+            prod = prod.crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
         else:
             prod = cutout(*prepare(it['src'], it.get('sr', False), CACHE / 'work' / out_dir.name / name, it.get('crop'), it.get('erase')),
                           it.get('solid', False))

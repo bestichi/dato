@@ -1,0 +1,32 @@
+{
+ "category": "საახალწლო",
+ "category_url": "https://superi.ge/saakhaltslo/",
+ "items": [
+  {
+   "file": "01-saakhaltslo-ganateba",
+   "label": "საახალწლო განათება",
+   "url": "https://superi.ge/saakhaltslo-ganateba/",
+   "src": "src/garland-render.png",
+   "sr": false,
+   "product": "თბილი ნათების ბურთულებიანი გირლიანდა — 3D სტუდიური რენდერი (საიტზე მხოლოდ გირლიანდების კოლოფების ფოტოებია)",
+   "exact_alpha": true
+  },
+  {
+   "file": "02-saakhaltslo-dekoraciebi",
+   "label": "საახალწლო დეკორაციები",
+   "url": "https://superi.ge/saakhaltslo-dekoraciebi/",
+   "src": "src/baubles-render.png",
+   "sr": false,
+   "product": "ნაძვის ხის სათამაშოები: ბორდოსფერი, ოქროსფერი, მარგალიტისფერი — 3D სტუდიური რენდერი",
+   "exact_alpha": true
+  },
+  {
+   "file": "03-nadzvis-kheebi",
+   "label": "ნაძვის ხეები",
+   "url": "https://superi.ge/nadzvis-kheebi/",
+   "src": "https://superi.ge/images/detailed/113/nadzvis-khe-sm-shereuli-silikonis-babi-210-1.webp",
+   "sr": false,
+   "product": "ნაძვის ხე BABI 210 სმ, შერეული სილიკონის წიწვით"
+  }
+ ]
+}

@@ -30,6 +30,8 @@ NODE_PATH=$(npm root -g) node preview_on_site.js ../<category>/banners.json ../s
 `render_safe.py` renders a studio product shot of a safe with Blender (`pip install bpy==4.2.0`, Python 3.11)
 for categories that have no product photo on superi.ge; the transparent PNG goes straight into
 `make_banners.py` as a local `"src"`.
+`render_newyear.py baubles|garland <out.png>` does the same for the New Year lighting and decorations cards;
+the garland's glow is soft alpha, so its item sets `"exact_alpha": true` to use the render as is.
 
 `preview_offline.js` does the same on a saved copy of a category page with the site's own stylesheet
 (`site-snapshot/`), for when superi.ge's Cloudflare check blocks automated browsers:
