@@ -65,6 +65,69 @@ CANON = {
     'tenda': 'Tenda', 'toorx': 'Toorx', 'evii': 'EVII', 'onvo': 'ONVO', 'garden star': 'Garden Star',
     'koopman': 'Koopman', 'thermex': 'Thermex', 'wadfow': 'WADFOW', 'sokany': 'Sokany', 'urevo ': 'UREVO',
     'leo': 'LEO', 'oz': 'Oz', 'group limited': '', 'nothing phone': 'Nothing',
+    'sali': 'SALI',
+    'a4tech': 'A4Tech',
+    'bloody': 'A4Tech',
+    'aula': 'AULA',
+    'kingsons': 'Kingsons',
+    'vention': 'Vention',
+    'uag': 'UAG',
+    'gembird': 'Gembird',
+    'vertex': 'Vertex',
+    'tucano': 'Tucano',
+    'lider': 'LIDER',
+    'satechi': 'Satechi',
+    'konica minolta': 'Konica Minolta',
+    'konica': 'Konica Minolta',
+    'logilink': 'LogiLink',
+    'keengross': 'Keengross',
+    'vetomax': 'VETOMAX',
+    'neon': 'Neon',
+    'hugong': 'HUGONG',
+    'meakida': 'MEAKIDA',
+    'govee': 'Govee',
+    'asiahorse': 'Asiahorse',
+    'yvolution': 'Yvolution',
+    'fiio': 'FiiO',
+    'belmash': 'BELMASH',
+    'benq': 'BenQ',
+    'golden field': 'Golden Field',
+    'paton': 'Paton',
+    'netac': 'Netac',
+    'bluetti': 'BLUETTI',
+    'raider': 'Raider',
+    'welder kraft': 'Welder Kraft',
+    'kidilo': 'Kidilo',
+    'avermedia': 'AVerMedia',
+    'ubtech': 'UBTech',
+    'miqilong': 'Miqilong',
+    'pocketbook': 'PocketBook',
+    'ivolia': 'IVOLIA',
+    'baybee': 'BAYBEE',
+    'edon': 'EDON',
+    'ubiquiti': 'Ubiquiti',
+    'unifi': 'Ubiquiti',
+    'sunlux': 'Sunlux',
+    'konftel': 'Konftel',
+    'amazon': 'Amazon',
+    'kindle': 'Amazon',
+    'monster': 'Monster',
+    'twinkly': 'Twinkly',
+    'uniview': 'Uniview',
+    'celestron': 'Celestron',
+    'laserpecker': 'LaserPecker',
+    'keylocker': 'Keylocker',
+    'aolo': 'AOLO',
+    'synology': 'Synology',
+    'insta360': 'Insta360',
+    'kattolini': 'Kattolini',
+    'grundfos': 'Grundfos',
+    'bose': 'Bose',
+    'arzopa': 'Arzopa',
+    'grandstream': 'Grandstream',
+    'golden child': 'Golden Child',
+    'dumitu': 'Golden Child',
+    'tp-link omada': 'TP-Link',
     'zalman': 'Zalman',
     'deepcool': 'DeepCool',
     'kingston': 'Kingston',
@@ -298,11 +361,17 @@ GAMES = [
 ]
 _GAMES = [(re.compile(p, re.I), b) for p, b in GAMES]
 _GAME_CTX = re.compile(r'\bgame\b|\bps[45]\b|playstation [45]|nintendo switch|xbox|^თამაში', re.I)
-_GENERIC_LEAD = re.compile(r'^(?:(?:bluetooth|usb|wi-?fi|mesh|adsl2\+|all[\s-]*in[\s-]*one|[345]g|lte|type-c|rgb|ssd|hdd|m\.2|nvme)[\s,/-]*)+', re.I)
+_GENERIC_LEAD = re.compile(r'^(?:(?:bluetooth|usb|wi-?fi|mesh|adsl2\+|all[\s-]*in[\s-]*one|[345]g|lte|type-c|rgb|ssd|hdd|m\.2|nvme|hdmi|displayport|vga|usb-[ac]|led|ip|ip-dect|dac|tig|vrla|poe)[\s,/-]*)+', re.I)
 WINDOW = 14
 
 
+ANYWHERE = [(re.compile(r'golden\s*child', re.I), 'Golden Child')]
+
+
 def detect_from_title(title, index):
+    for rx, b in ANYWHERE:
+        if rx.search(title):
+            return b
     if _GAME_CTX.search(title):
         for rx, b in _GAMES:
             if rx.search(title):

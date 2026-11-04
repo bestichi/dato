@@ -276,7 +276,7 @@ code_count = Counter(r['Product code'].strip() for r in rows)
 all_site_brands = {canon(c.get('ld_brand', '')) for c in crawl.values()}
 brand_index = [(rx, b) for rx, b in build_brand_index(all_site_brands)
                if rx.pattern.lower().find('oz') < 0 or len(b) > 2]
-brand_index = [(rx, b) for rx, b in brand_index if b not in ('OZ', 'Oz', 'UD', 'LEO', 'Karma')]
+brand_index = [(rx, b) for rx, b in brand_index if b not in ('OZ', 'Oz', 'UD', 'Karma')]
 
 feed, skipped, review = [], [], []
 seen_ids = set()
